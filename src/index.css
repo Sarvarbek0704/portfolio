@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle grid background for hero */
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgb(15 23 42 / 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(15 23 42 / 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.dark .grid-bg {
+  background-image:
+    linear-gradient(to right, rgb(226 232 240 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(226 232 240 / 0.05) 1px, transparent 1px);
+}
+
+/* Smooth focus rings */
+:focus-visible {
+  outline: 2px solid rgb(15 23 42);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.dark :focus-visible {
+  outline-color: rgb(226 232 240);
+}
+
+/* Selection color */
+::selection { background: rgb(15 23 42); color: rgb(248 250 252); }
+.dark ::selection { background: rgb(226 232 240); color: rgb(15 23 42); }
+
+/* Hide scrollbar but keep functionality on tag rows */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
