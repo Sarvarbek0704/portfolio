@@ -8,7 +8,8 @@ export type Project = {
   highlights: { uz: string[]; en: string[] };
   stack: string[];
   live?: string;
-  github: string;
+  github?: string;
+  badge?: { uz: string; en: string };
   demo?: {
     label: { uz: string; en: string };
     entries: { role: string; email: string; password: string }[];
@@ -18,6 +19,90 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    slug: "manajoy",
+    title: "ManaJoy",
+    tagline: {
+      uz: "Onlayn marketplace — chegirmalar, do'konlar va xizmatlar",
+      en: "Online marketplace — discounts, stores & services",
+    },
+    badge: { uz: "Ish joyi · Jamoa", en: "At work · Team" },
+    description: {
+      uz: "O'zbekiston bo'ylab ishlaydigan real onlayn marketplace. Mahsulotlar, yaqin do'konlar va xizmatlar (gaming zonalar, salonlar, sartaroshxonalar, sport, restoranlar — stol bron qilish bilan), loyalty kartalari va ball tizimi, sotuvchi bo'lish oqimi. Men 2026-maydan beri jamoada frontend dasturchi sifatida mijozlar sayti va ichki admin panelini rivojlantiraman.",
+      en: "A real, in-production online marketplace serving all of Uzbekistan — products, nearby stores and services (gaming venues, salons, barbershops, sports, restaurants with table reservations), loyalty cards and a points system, and seller onboarding. Since May 2026 I've been building the customer-facing site and the internal admin panel as a frontend developer on the team.",
+    },
+    highlights: {
+      uz: [
+        "Mahsulot, do'kon va xizmatlar katalogi — qidiruv va filtrlash",
+        "MapLibre GL bilan \"yaqin do'konlar\" xaritasi va geolokatsiya",
+        "Loyalty — ballar, chegirma kartalari va aksiyalar",
+        "Buyurtma kuzatuvi va xizmat/restoran bron qilish oqimi",
+        "Ichki admin panel: mahsulot, do'kon, buyurtma boshqaruvi va statistika",
+      ],
+      en: [
+        "Product, store and service catalog with search and filtering",
+        "\"Nearby stores\" map and geolocation via MapLibre GL",
+        "Loyalty — points, discount cards and promotions",
+        "Order tracking and service/restaurant reservation flow",
+        "Internal admin panel: product, store and order management with analytics",
+      ],
+    },
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "shadcn/ui",
+      "MapLibre GL",
+      "TanStack Query",
+      "React Hook Form",
+      "Zod",
+    ],
+    live: "https://manajoy.uz",
+    year: "2026",
+    category: { uz: "Marketplace · Xizmatlar", en: "Marketplace · Services" },
+  },
+  {
+    slug: "wisar",
+    title: "Wisar",
+    tagline: {
+      uz: "Dasturlash va ingliz tili o'rganish platformasi",
+      en: "Programming & English learning platform",
+    },
+    badge: { uz: "Jonli mahsulot · Yakka", en: "Live product · Solo" },
+    description: {
+      uz: "O'zbek tilidagi bepul ta'lim platformasi — noldan senior+ gacha to'liq full-stack dasturlash kursi, 499+ maqola va 34+ bo'lim, ingliz tili va IELTS moduli. Interaktiv mashqlar, SM-2 spaced repetition flashcardlari, kunlik planner va streak tizimi bilan bilimni amaliyotga bog'laydi. Ushbu platformani boshidan oxirigacha o'zim ishlab chiqdim va real domenda ishga tushirdim.",
+      en: "A free Uzbek-language learning platform — a full-stack programming course from zero to senior+, 499+ articles across 34+ sections, plus English and IELTS modules. It ties theory to practice with interactive exercises, SM-2 spaced-repetition flashcards, a daily planner and a streak system. I built this platform end-to-end on my own and shipped it on a real domain.",
+    },
+    highlights: {
+      uz: [
+        "499+ maqola, 34+ bo'lim — noldan senior+ gacha kurs",
+        "Interaktiv mashqlar: kod yozish, quiz, bo'sh joyni to'ldirish",
+        "SM-2 algoritmi asosidagi spaced repetition flashcard tizimi",
+        "IELTS Coach — mock testlar va progress kuzatuvi",
+        "Kunlik planner, streak va progress dashboard (haftalik hisobot, sertifikat)",
+      ],
+      en: [
+        "499+ articles across 34+ sections — a zero-to-senior+ course",
+        "Interactive exercises: coding challenges, quizzes, fill-in-the-blank",
+        "SM-2 spaced-repetition flashcard system",
+        "IELTS Coach — mock tests and progress tracking",
+        "Daily planner, streaks and a progress dashboard (weekly reports, certificates)",
+      ],
+    },
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "Redux Toolkit",
+      "TanStack Query",
+      "Framer Motion",
+    ],
+    live: "https://wisar.uz",
+    year: "2026",
+    category: { uz: "Ta'lim · EdTech", en: "Education · EdTech" },
+  },
   {
     slug: "mathacademy",
     title: "MathAcademy Digital Campus",
@@ -492,8 +577,8 @@ export const t = {
     role: { uz: "Full-Stack Web Developer", en: "Full-Stack Web Developer" },
     based: { uz: "Toshkent, Oʻzbekiston", en: "Tashkent, Uzbekistan" },
     intro: {
-      uz: "Production darajadagi to'liq stack ilovalar quraman — tibbiyot, e-commerce, ta'lim, marketplace, sayohat va boshqa sohalarda. Toza arxitektura, xavfsizlik va foydalanuvchi tajribasiga jiddiy yondashaman.",
-      en: "I build production-grade full-stack applications across healthcare, e-commerce, education, marketplaces, travel, and beyond. I care deeply about clean architecture, security, and user experience.",
+      uz: "Toshkentda yashovchi Full-Stack Web Developerman. Hozir ManaJoy'da frontend dasturchi sifatida ishlayapman — real foydalanuvchili marketplace va uning admin panelini rivojlantiraman. Bundan tashqari boshidan oxirigacha o'zim qurgan wisar.uz ta'lim platformasi va yana 7 ta to'liq stack loyiham bor.",
+      en: "Full-Stack Web Developer based in Tashkent. I currently work as a frontend developer at ManaJoy, building a real-world marketplace and its admin panel. Alongside that I've built the wisar.uz learning platform and 7 more full-stack projects end-to-end on my own.",
     },
     cta1: { uz: "Loyihalarimni ko'ring", en: "View my work" },
     cta2: { uz: "Bog'lanish", en: "Get in touch" },
@@ -503,11 +588,12 @@ export const t = {
     eyebrow: { uz: "01 — Loyihalar", en: "01 — Selected Work" },
     title: { uz: "Mening loyihalarim", en: "Featured projects" },
     subtitle: {
-      uz: "7 ta production darajadagi to'liq stack ilova — har biri solo qurilgan, deploy qilingan va to'liq test sifatida  ishlaydi.",
-      en: "Seven production-grade full-stack applications — each built solo, deployed, and fully functional.",
+      uz: "To'qqizta loyiha — ManaJoy (ish joyimda jamoada quradigan jonli marketplace) va Wisar (o'zim yakka qurgan jonli ta'lim platformasi) real domenlarda ishlaydi, qolgan yettitasini esa boshidan oxirigacha yakka o'zim qurib deploy qildim.",
+      en: "Nine projects — ManaJoy (a live marketplace I build with a team at work) and Wisar (a live learning platform I built solo) run on real domains, plus seven more I built and deployed end-to-end on my own.",
     },
     viewLive: { uz: "Saytni ochish", en: "Live site" },
     viewCode: { uz: "Kodni ko'rish", en: "Source code" },
+    privateCode: { uz: "Kod yopiq", en: "Private code" },
     highlights: { uz: "Asosiy xususiyatlar", en: "Key features" },
     stack: { uz: "Texnologiyalar", en: "Tech stack" },
     closeBtn: { uz: "Yopish", en: "Close" },
@@ -520,23 +606,25 @@ export const t = {
       en: "I'm a 19-year-old Full-Stack Web Developer based in Tashkent. I completed an 8-month intensive Full-Stack bootcamp at Najot Ta'lim and study Information Security as a part-time 3rd-year student at Tashkent State University of Economics.",
     },
     p2: {
-      uz: "So'nggi bir yil ichida boshidan oxirigacha o'zim qurgan 7 ta production darajadagi ilova bor — tibbiyot, e-commerce, ta'lim, freelance marketplace, sayohat rejalashtirish, jamoa boshqaruvi va kutubxona boshqaruvi sohalarida. Har bir loyihada multi-tenant DB sxemasidan tortib RBAC, JWT, real-time va escrow to'lovgacha hammasini o'zim ishlab chiqdim.",
-      en: "Over the past year I've shipped 7 production-grade applications from scratch — across healthcare, e-commerce, education, freelance marketplaces, travel planning, team collaboration, and library management. Each one covers multi-tenant DB schemas, RBAC, JWT, real-time features, and escrow payment flows, all built end-to-end.",
+      uz: "2026-yilning may oyidan beri ManaJoy'da frontend dasturchi sifatida ishlayapman — O'zbekiston bo'ylab ishlaydigan real marketplace va uning admin panelini jamoada, project manager rahbarligida rivojlantiraman. Bu menga real mahsulot, kod-review va jamoada ishlash tajribasini beryapti.",
+      en: "Since May 2026 I've been working as a frontend developer at ManaJoy — building a real, nationwide marketplace and its admin panel with a team, led by a project manager. It's giving me hands-on experience with a real product, code review and teamwork.",
     },
     p3: {
-      uz: "Hozir tajribali jamoaga qo'shilib, real biznes muammolarini hal qilishga va katta masshtabli mahsulotlarda ishtirok etishga tayyorman. Tez o'rganaman, har bir yozgan kodimga javob beraman.",
-      en: "Right now I'm looking to join an experienced team where I can solve real business problems and contribute to products at scale. I learn fast and take ownership of every line I ship.",
+      uz: "Ishdan tashqari boshidan oxirigacha o'zim qurgan real ta'lim platformam wisar.uz jonli ishlaydi, shuningdek yakka ishlab chiqqan 7 ta to'liq stack loyiham bor — tibbiyot, e-commerce, ta'lim, freelance marketplace, sayohat, jamoa boshqaruvi va kutubxona sohalarida. Har birida multi-tenant DB, RBAC, JWT, real-time va to'lov oqimlarini o'zim ishlab chiqdim. Hozir kuchli jamoalar bilan katta masshtabli ishlarga ham ochiqman.",
+      en: "Outside of work my own learning platform wisar.uz is live, and I've shipped 7 more full-stack projects solo — across healthcare, e-commerce, education, freelance marketplaces, travel, team collaboration and library management — each covering multi-tenant DB schemas, RBAC, JWT, real-time features and payment flows. I'm also open to larger-scale work with strong teams.",
     },
     facts: {
       uz: [
         { k: "Joylashuv", v: "Toshkent, O'zbekiston" },
-        { k: "Tajriba", v: "Yetti ta to'liq stack loyiha" },
+        { k: "Hozirgi ish", v: "Frontend Dev · ManaJoy" },
+        { k: "Tajriba", v: "9 loyiha · 2 real mahsulot" },
         { k: "Ta'lim", v: "TDIU + Najot Ta'lim" },
-        { k: "Mavjudligi", v: "Ish uchun ochiq" },
+        { k: "Mavjudligi", v: "Yangi imkoniyatlarga ochiq" },
       ],
       en: [
         { k: "Location", v: "Tashkent, Uzbekistan" },
-        { k: "Experience", v: "Seven full-stack projects" },
+        { k: "Current role", v: "Frontend Dev · ManaJoy" },
+        { k: "Experience", v: "9 projects · 2 live products" },
         { k: "Education", v: "TSUE + Najot Ta'lim" },
         { k: "Availability", v: "Open to opportunities" },
       ],
@@ -557,9 +645,29 @@ export const t = {
     },
   },
   experience: {
-    eyebrow: { uz: "04 — Ta'lim", en: "04 — Education" },
-    title: { uz: "Ta'lim yo'lim", en: "Education path" },
-    items: {
+    eyebrow: { uz: "04 — Tajriba", en: "04 — Experience" },
+    title: { uz: "Ish va ta'lim", en: "Experience & Education" },
+    workLabel: { uz: "Ish tajribasi", en: "Work experience" },
+    eduLabel: { uz: "Ta'lim", en: "Education" },
+    work: {
+      uz: [
+        {
+          place: "ManaJoy",
+          role: "Frontend dasturchi",
+          period: "2026-may — hozir",
+          note: "O'zbekiston bo'ylab ishlaydigan onlayn marketplace (chegirmalar, do'konlar, xizmatlar, loyalty). Mijozlar sayti va ichki admin panelini React, Next.js va TypeScript'da rivojlantiraman — mahsulot va do'kon kataloglari, MapLibre bilan xarita, buyurtma va loyalty oqimlari. Project manager rahbarligida jamoada ishlayman.",
+        },
+      ],
+      en: [
+        {
+          place: "ManaJoy",
+          role: "Frontend Developer",
+          period: "May 2026 — Present",
+          note: "Nationwide online marketplace (discounts, stores, services, loyalty). I build the customer-facing site and the internal admin panel with React, Next.js and TypeScript — product and store catalogs, MapLibre maps, order and loyalty flows. Working within a team led by a project manager.",
+        },
+      ],
+    },
+    education: {
       uz: [
         {
           place: "Toshkent Davlat Iqtisodiyot Universiteti",
