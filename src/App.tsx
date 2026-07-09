@@ -301,9 +301,12 @@ function Hero({ lang, onResumeClick }: { lang: Lang; onResumeClick: () => void }
               {/* Floating tag */}
               <div className="absolute -bottom-4 -left-4 rounded-2xl border border-ink-200 bg-white px-4 py-3 shadow-lg dark:border-ink-800 dark:bg-ink-900">
                 <div className="text-xs font-medium uppercase tracking-wider text-ink-500">
-                  {lang === 'uz' ? 'Loyihalar' : 'Projects'}
+                  {lang === 'uz' ? 'Hozir' : 'Currently'}
                 </div>
-                <div className="font-display text-2xl font-extrabold">7+</div>
+                <div className="font-display text-2xl font-extrabold leading-tight">ManaJoy</div>
+                <div className="text-[11px] font-medium text-ink-500">
+                  {lang === 'uz' ? 'Frontend dasturchi' : 'Frontend Developer'}
+                </div>
               </div>
             </div>
           </div>
@@ -332,6 +335,12 @@ function Work({ lang, onOpenProject }: { lang: Lang; onOpenProject: (slug: strin
               {/* Top row */}
               <div className="mb-6 flex items-start justify-between gap-3">
                 <div>
+                  {p.badge && (
+                    <span className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-emerald-700 dark:text-emerald-400">
+                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                      {p.badge[lang]}
+                    </span>
+                  )}
                   <div className="text-[10px] font-semibold uppercase tracking-[0.15em] text-ink-500 dark:text-ink-400">
                     {p.category[lang]} · {p.year}
                   </div>
@@ -439,23 +448,33 @@ function Skills({ lang }: { lang: Lang }) {
 /* ---------- EXPERIENCE / EDUCATION ---------- */
 
 function Experience({ lang }: { lang: Lang }) {
-  const items = t.experience.items[lang]
+  const groups = [
+    { label: t.experience.workLabel[lang], items: t.experience.work[lang] },
+    { label: t.experience.eduLabel[lang], items: t.experience.education[lang] },
+  ]
   return (
     <section id="experience" className="border-t border-ink-200 py-20 sm:py-28 dark:border-ink-800">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeader eyebrow={t.experience.eyebrow[lang]} title={t.experience.title[lang]} />
 
-        <div className="mt-12 space-y-8">
-          {items.map((item, i) => (
-            <div
-              key={i}
-              className="grid grid-cols-1 gap-2 border-t border-ink-200 pt-6 sm:grid-cols-[180px_1fr] sm:gap-8 dark:border-ink-800"
-            >
-              <div className="text-sm font-semibold uppercase tracking-wider text-ink-500">{item.period}</div>
-              <div>
-                <h3 className="font-display text-xl font-bold tracking-tight">{item.place}</h3>
-                <div className="mt-1 text-sm font-medium text-ink-600 dark:text-ink-400">{item.role}</div>
-                <p className="mt-3 text-base leading-relaxed text-ink-700 dark:text-ink-300">{item.note}</p>
+        <div className="mt-12 space-y-14">
+          {groups.map((g) => (
+            <div key={g.label}>
+              <h3 className="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-ink-500">{g.label}</h3>
+              <div className="space-y-8">
+                {g.items.map((item, i) => (
+                  <div
+                    key={i}
+                    className="grid grid-cols-1 gap-2 border-t border-ink-200 pt-6 sm:grid-cols-[180px_1fr] sm:gap-8 dark:border-ink-800"
+                  >
+                    <div className="text-sm font-semibold uppercase tracking-wider text-ink-500">{item.period}</div>
+                    <div>
+                      <h4 className="font-display text-xl font-bold tracking-tight">{item.place}</h4>
+                      <div className="mt-1 text-sm font-medium text-ink-600 dark:text-ink-400">{item.role}</div>
+                      <p className="mt-3 text-base leading-relaxed text-ink-700 dark:text-ink-300">{item.note}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           ))}

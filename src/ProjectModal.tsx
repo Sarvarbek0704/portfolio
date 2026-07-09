@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { ArrowUpRight, Check, ExternalLink, Github, X } from 'lucide-react'
+import { ArrowUpRight, Check, ExternalLink, Github, Lock, X } from 'lucide-react'
 import { t, type Lang, type Project } from './content'
 
 export default function ProjectModal({
@@ -33,6 +33,12 @@ export default function ProjectModal({
         {/* Sticky header */}
         <div className="sticky top-0 z-10 flex items-start justify-between gap-4 border-b border-ink-200 bg-white/95 px-6 py-5 backdrop-blur dark:border-ink-800 dark:bg-ink-900/95 sm:px-8">
           <div className="min-w-0">
+            {project.badge && (
+              <span className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-emerald-700 dark:text-emerald-400">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                {project.badge[lang]}
+              </span>
+            )}
             <div className="mb-1.5 text-[10px] font-semibold uppercase tracking-[0.15em] text-ink-500">
               {project.category[lang]} · {project.year}
             </div>
@@ -66,15 +72,22 @@ export default function ProjectModal({
                 {t.work.viewLive[lang]}
               </a>
             )}
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-full border border-ink-300 px-4 py-2 text-sm font-semibold text-ink-900 transition-colors hover:bg-ink-50 dark:border-ink-700 dark:text-ink-100 dark:hover:bg-ink-800"
-            >
-              <Github size={14} />
-              {t.work.viewCode[lang]}
-            </a>
+            {project.github ? (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-full border border-ink-300 px-4 py-2 text-sm font-semibold text-ink-900 transition-colors hover:bg-ink-50 dark:border-ink-700 dark:text-ink-100 dark:hover:bg-ink-800"
+              >
+                <Github size={14} />
+                {t.work.viewCode[lang]}
+              </a>
+            ) : (
+              <span className="flex items-center gap-2 rounded-full border border-dashed border-ink-300 px-4 py-2 text-sm font-semibold text-ink-500 dark:border-ink-700 dark:text-ink-400">
+                <Lock size={14} />
+                {t.work.privateCode[lang]}
+              </span>
+            )}
           </div>
 
           {/* Description */}
