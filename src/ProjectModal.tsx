@@ -57,6 +57,13 @@ export default function ProjectModal({
 
         {/* Scrollable content */}
         <div className="overflow-y-auto px-6 py-6 sm:px-8" style={{ maxHeight: 'calc(92vh - 90px)' }}>
+          {project.image && (
+            <img
+              src={project.image}
+              alt={project.title}
+              className="mb-6 aspect-[16/10] w-full rounded-xl border border-ink-200 object-cover object-top dark:border-ink-800"
+            />
+          )}
           <p className="text-lg font-medium text-ink-700 dark:text-ink-300">{project.tagline[lang]}</p>
 
           {/* Action buttons */}

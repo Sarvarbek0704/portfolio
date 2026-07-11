@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState, type ReactNode } from 'react'
 import {
   ArrowUpRight,
   Download,
@@ -15,7 +15,8 @@ import {
   Sun,
   X,
 } from 'lucide-react'
-import { projects, skills, t, type Lang } from './content'
+import { motion } from 'framer-motion'
+import { projects, skills, t, type Lang, type Project } from './content'
 import ProjectModal from './ProjectModal'
 
 function useDarkMode() {
@@ -46,6 +47,70 @@ function useLang() {
   return [lang, setLang] as const
 }
 
+function useActiveSection(ids: string[]) {
+  const [active, setActive] = useState<string>('')
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) setActive(e.target.id)
+        })
+      },
+      { rootMargin: '-45% 0px -50% 0px' },
+    )
+    ids.forEach((id) => {
+      const el = document.getElementById(id)
+      if (el) obs.observe(el)
+    })
+    return () => obs.disconnect()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ids.join(',')])
+  return active
+}
+
+function Reveal({
+  children,
+  delay = 0,
+  className,
+}: {
+  children: ReactNode
+  delay?: number
+  className?: string
+}) {
+  return (
+    <motion.div
+      className={className}
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-70px' }}
+      transition={{ duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] }}
+    >
+      {children}
+    </motion.div>
+  )
+}
+
+function ProjectThumb({ p, className }: { p: Project; className?: string }) {
+  return (
+    <div className={`relative overflow-hidden bg-ink-100 dark:bg-ink-800 ${className ?? ''}`}>
+      {p.image ? (
+        <img
+          src={p.image}
+          alt={p.title}
+          loading="lazy"
+          className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+        />
+      ) : (
+        <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-ink-100 via-ink-50 to-ink-200 dark:from-ink-800 dark:via-ink-900 dark:to-ink-950">
+          <span className="font-display text-3xl font-extrabold tracking-tight text-ink-400 dark:text-ink-500">
+            {p.title}
+          </span>
+        </div>
+      )}
+    </div>
+  )
+}
+
 export default function App() {
   const [dark, setDark] = useDarkMode()
   const [lang, setLang] = useLang()
@@ -58,6 +123,8 @@ export default function App() {
     [activeProject],
   )
 
+  const activeSection = useActiveSection(['work', 'about', 'skills', 'contact'])
+
   return (
     <div className="min-h-screen bg-white text-ink-900 transition-colors dark:bg-ink-950 dark:text-ink-100">
       <Header
@@ -68,6 +135,7 @@ export default function App() {
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
         onResumeClick={() => setResumeOpen(true)}
+        active={activeSection}
       />
 
       <main>
@@ -97,6 +165,7 @@ function Header({
   menuOpen,
   setMenuOpen,
   onResumeClick,
+  active,
 }: {
   lang: Lang
   setLang: (l: Lang) => void
@@ -105,6 +174,7 @@ function Header({
   menuOpen: boolean
   setMenuOpen: (b: boolean) => void
   onResumeClick: () => void
+  active: string
 }) {
   const links = [
     { id: 'work', label: t.nav.work[lang] },
@@ -128,9 +198,16 @@ function Header({
             <a
               key={l.id}
               href={`#${l.id}`}
-              className="text-sm font-medium text-ink-600 transition-colors hover:text-ink-900 dark:text-ink-400 dark:hover:text-ink-100"
+              className={`relative text-sm font-medium transition-colors ${
+                active === l.id
+                  ? 'text-ink-900 dark:text-ink-100'
+                  : 'text-ink-600 hover:text-ink-900 dark:text-ink-400 dark:hover:text-ink-100'
+              }`}
             >
               {l.label}
+              {active === l.id && (
+                <span className="absolute -bottom-1.5 left-0 h-0.5 w-full rounded-full bg-ink-900 dark:bg-ink-100" />
+              )}
             </a>
           ))}
         </nav>
@@ -302,12 +379,17 @@ function Work({ lang, onOpenProject }: { lang: Lang; onOpenProject: (slug: strin
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2">
           {projects.map((p, i) => (
-            <button
+            <motion.button
               key={p.slug}
               onClick={() => onOpenProject(p.slug)}
-              className="group relative flex flex-col overflow-hidden rounded-2xl border border-ink-200 bg-white p-7 text-left transition-all hover:-translate-y-1 hover:border-ink-400 hover:shadow-xl hover:shadow-ink-900/5 dark:border-ink-800 dark:bg-ink-900 dark:hover:border-ink-600 dark:hover:shadow-black/40"
-              style={{ animationDelay: `${i * 80}ms` }}
+              className="group relative flex flex-col overflow-hidden rounded-2xl border border-ink-200 bg-white text-left transition-all hover:-translate-y-1 hover:border-ink-400 hover:shadow-xl hover:shadow-ink-900/5 dark:border-ink-800 dark:bg-ink-900 dark:hover:border-ink-600 dark:hover:shadow-black/40"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.45, delay: (i % 2) * 0.08, ease: [0.22, 1, 0.36, 1] }}
             >
+              <ProjectThumb p={p} className="aspect-[16/10] w-full border-b border-ink-200 dark:border-ink-800" />
+              <div className="flex flex-1 flex-col p-7">
               {/* Top row */}
               <div className="mb-6 flex items-start justify-between gap-3">
                 <div>
@@ -346,7 +428,8 @@ function Work({ lang, onOpenProject }: { lang: Lang; onOpenProject: (slug: strin
                   </span>
                 )}
               </div>
-            </button>
+              </div>
+            </motion.button>
           ))}
         </div>
       </div>
@@ -517,11 +600,11 @@ function Footer({ lang }: { lang: Lang }) {
 
 function SectionHeader({ eyebrow, title, subtitle }: { eyebrow: string; title: string; subtitle?: string }) {
   return (
-    <div className="max-w-2xl">
+    <Reveal className="max-w-2xl">
       <div className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-ink-500">{eyebrow}</div>
       <h2 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl">{title}</h2>
       {subtitle && <p className="mt-4 text-base leading-relaxed text-ink-600 sm:text-lg dark:text-ink-400">{subtitle}</p>}
-    </div>
+    </Reveal>
   )
 }
 
