@@ -221,10 +221,8 @@ function Hero({ lang, onResumeClick }: { lang: Lang; onResumeClick: () => void }
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-ink-200 to-transparent dark:via-ink-800" aria-hidden />
 
       <div className="relative mx-auto max-w-6xl px-5 pt-20 pb-24 sm:px-8 sm:pt-28 sm:pb-32 lg:pt-32 lg:pb-40">
-        <div className="grid items-center gap-12 lg:grid-cols-[1fr_auto] lg:gap-16">
-          {/* Text */}
-          <div className="max-w-2xl">
-            <div className="mb-6 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-ink-500 animate-fade-in">
+        <div className="mx-auto max-w-4xl text-center">
+            <div className="mb-6 flex items-center justify-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-ink-500 animate-fade-in">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
@@ -244,11 +242,14 @@ function Hero({ lang, onResumeClick }: { lang: Lang; onResumeClick: () => void }
             </h1>
 
             <div
-              className="mb-6 flex flex-wrap items-center gap-3 text-sm font-medium text-ink-600 dark:text-ink-400 animate-fade-up"
+              className="mb-6 flex flex-wrap items-center justify-center gap-3 text-sm font-medium text-ink-600 dark:text-ink-400 animate-fade-up"
               style={{ animationDelay: '200ms' }}
             >
               <span className="rounded-full border border-ink-200 px-3 py-1 dark:border-ink-700">
                 {t.hero.role[lang]}
+              </span>
+              <span className="rounded-full border border-ink-200 px-3 py-1 dark:border-ink-700">
+                {lang === 'uz' ? 'Frontend · ManaJoy' : 'Frontend · ManaJoy'}
               </span>
               <span className="flex items-center gap-1">
                 <MapPin size={14} />
@@ -257,13 +258,13 @@ function Hero({ lang, onResumeClick }: { lang: Lang; onResumeClick: () => void }
             </div>
 
             <p
-              className="mb-8 max-w-xl text-base leading-relaxed text-ink-600 sm:text-lg dark:text-ink-400 animate-fade-up"
+              className="mb-8 mx-auto max-w-2xl text-base leading-relaxed text-ink-600 sm:text-lg dark:text-ink-400 animate-fade-up"
               style={{ animationDelay: '280ms' }}
             >
               {t.hero.intro[lang]}
             </p>
 
-            <div className="flex flex-wrap gap-3 animate-fade-up" style={{ animationDelay: '360ms' }}>
+            <div className="flex flex-wrap justify-center gap-3 animate-fade-up" style={{ animationDelay: '360ms' }}>
               <a
                 href="#work"
                 className="group flex items-center gap-2 rounded-full bg-ink-900 px-5 py-3 text-sm font-semibold text-white transition-all hover:gap-3 hover:bg-ink-800 dark:bg-ink-100 dark:text-ink-900 dark:hover:bg-white"
@@ -286,32 +287,7 @@ function Hero({ lang, onResumeClick }: { lang: Lang; onResumeClick: () => void }
               </button>
             </div>
           </div>
-
-          {/* Photo */}
-          <div className="relative mx-auto lg:mx-0 animate-fade-up" style={{ animationDelay: '440ms' }}>
-            <div className="relative">
-              <div className="absolute -inset-2 rounded-3xl bg-gradient-to-br from-ink-200/60 via-transparent to-ink-200/60 blur-2xl dark:from-ink-800/60 dark:to-ink-800/60" />
-              <div className="relative overflow-hidden rounded-2xl border border-ink-200 shadow-2xl shadow-ink-900/10 dark:border-ink-800 dark:shadow-black/40">
-                <img
-                  src="/profile.jpg"
-                  alt="Sarvarbek Sodiqov"
-                  className="h-80 w-72 object-cover sm:h-96 sm:w-80"
-                />
-              </div>
-              {/* Floating tag */}
-              <div className="absolute -bottom-4 -left-4 rounded-2xl border border-ink-200 bg-white px-4 py-3 shadow-lg dark:border-ink-800 dark:bg-ink-900">
-                <div className="text-xs font-medium uppercase tracking-wider text-ink-500">
-                  {lang === 'uz' ? 'Hozir' : 'Currently'}
-                </div>
-                <div className="font-display text-2xl font-extrabold leading-tight">ManaJoy</div>
-                <div className="text-[11px] font-medium text-ink-500">
-                  {lang === 'uz' ? 'Frontend dasturchi' : 'Frontend Developer'}
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
   )
 }
