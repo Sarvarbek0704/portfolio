@@ -4,6 +4,7 @@ import {
   Download,
   ExternalLink,
   Github,
+  Images,
   Linkedin,
   Mail,
   MapPin,
@@ -93,9 +94,9 @@ function Reveal({
 function ProjectThumb({ p, className }: { p: Project; className?: string }) {
   return (
     <div className={`relative overflow-hidden bg-ink-100 dark:bg-ink-800 ${className ?? ''}`}>
-      {p.image ? (
+      {p.images && p.images.length > 0 ? (
         <img
-          src={p.image}
+          src={p.images[0]}
           alt={p.title}
           loading="lazy"
           className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
@@ -106,6 +107,11 @@ function ProjectThumb({ p, className }: { p: Project; className?: string }) {
             {p.title}
           </span>
         </div>
+      )}
+      {p.images && p.images.length > 1 && (
+        <span className="absolute bottom-2 right-2 flex items-center gap-1 rounded-full bg-black/55 px-2 py-0.5 text-[10px] font-semibold text-white backdrop-blur-sm">
+          <Images size={11} /> {p.images.length}
+        </span>
       )}
     </div>
   )

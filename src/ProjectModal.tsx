@@ -1,6 +1,63 @@
-import { useEffect } from 'react'
-import { ArrowUpRight, Check, ExternalLink, Github, Lock, X } from 'lucide-react'
+import { useEffect, useState } from 'react'
+import { ArrowUpRight, Check, ChevronLeft, ChevronRight, ExternalLink, Github, Lock, X } from 'lucide-react'
 import { t, type Lang, type Project } from './content'
+
+function Gallery({ images, title }: { images?: string[]; title: string }) {
+  const [i, setI] = useState(0)
+  if (!images || images.length === 0) return null
+  const many = images.length > 1
+  const go = (d: number) => setI((prev) => (prev + d + images.length) % images.length)
+  return (
+    <div className="mb-6">
+      <div className="relative overflow-hidden rounded-xl border border-ink-200 dark:border-ink-800">
+        <img
+          src={images[i]}
+          alt={`${title} — ${i + 1}`}
+          className="aspect-[16/10] w-full object-cover object-top"
+        />
+        {many && (
+          <>
+            <button
+              onClick={() => go(-1)}
+              aria-label="Previous screenshot"
+              className="absolute left-2 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 text-ink-900 shadow transition-colors hover:bg-white dark:bg-ink-900/85 dark:text-ink-100"
+            >
+              <ChevronLeft size={18} />
+            </button>
+            <button
+              onClick={() => go(1)}
+              aria-label="Next screenshot"
+              className="absolute right-2 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 text-ink-900 shadow transition-colors hover:bg-white dark:bg-ink-900/85 dark:text-ink-100"
+            >
+              <ChevronRight size={18} />
+            </button>
+            <span className="absolute bottom-2 right-2 rounded-full bg-black/55 px-2 py-0.5 text-[11px] font-semibold text-white">
+              {i + 1} / {images.length}
+            </span>
+          </>
+        )}
+      </div>
+      {many && (
+        <div className="mt-2 flex gap-2 overflow-x-auto pb-1">
+          {images.map((src, idx) => (
+            <button
+              key={src}
+              onClick={() => setI(idx)}
+              aria-label={`Screenshot ${idx + 1}`}
+              className={`h-14 w-24 flex-shrink-0 overflow-hidden rounded-lg border-2 transition-all ${
+                idx === i
+                  ? 'border-ink-900 dark:border-ink-100'
+                  : 'border-transparent opacity-60 hover:opacity-100'
+              }`}
+            >
+              <img src={src} alt="" className="h-full w-full object-cover object-top" />
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
 
 export default function ProjectModal({
   project,
@@ -57,13 +114,7 @@ export default function ProjectModal({
 
         {/* Scrollable content */}
         <div className="overflow-y-auto px-6 py-6 sm:px-8" style={{ maxHeight: 'calc(92vh - 90px)' }}>
-          {project.image && (
-            <img
-              src={project.image}
-              alt={project.title}
-              className="mb-6 aspect-[16/10] w-full rounded-xl border border-ink-200 object-cover object-top dark:border-ink-800"
-            />
-          )}
+          <Gallery key={project.slug} images={project.images} title={project.title} />
           <p className="text-lg font-medium text-ink-700 dark:text-ink-300">{project.tagline[lang]}</p>
 
           {/* Action buttons */}

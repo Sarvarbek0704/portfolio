@@ -9,7 +9,7 @@ export type Project = {
   stack: string[];
   live?: string;
   github?: string;
-  image?: string;
+  images?: string[];
   badge?: { uz: string; en: string };
   demo?: {
     label: { uz: string; en: string };
@@ -23,7 +23,7 @@ export const projects: Project[] = [
   {
     slug: "manajoy",
     title: "ManaJoy",
-    image: "/shots/manajoy.jpg",
+    images: ["/shots/manajoy.jpg"],
     tagline: {
       uz: "Onlayn marketplace — chegirmalar, do'konlar va xizmatlar",
       en: "Online marketplace — discounts, stores & services",
@@ -108,7 +108,7 @@ export const projects: Project[] = [
   {
     slug: "mathacademy",
     title: "MathAcademy Digital Campus",
-    image: "/shots/mathacademy.jpg",
+    images: ["/shots/mathacademy.jpg"],
     tagline: {
       uz: "Multi-tenant ta'lim boshqaruv platformasi",
       en: "Multi-tenant Learning Management System",
@@ -165,7 +165,7 @@ export const projects: Project[] = [
   {
     slug: "smdshop",
     title: "SMD Shop",
-    image: "/shots/smdshop.jpg",
+    images: ["/shots/smdshop.jpg"],
     tagline: {
       uz: "To'liq stack e-commerce platforma",
       en: "Full-stack e-commerce marketplace",
@@ -288,7 +288,7 @@ export const projects: Project[] = [
   {
     slug: "nexus",
     title: "Nexus",
-    image: "/shots/nexus.jpg",
+    images: ["/shots/nexus.jpg"],
     tagline: {
       uz: "Freelance va agentlik marketplace platformasi",
       en: "Freelance & agency marketplace",
@@ -357,7 +357,7 @@ export const projects: Project[] = [
   {
     slug: "meridian",
     title: "Meridian",
-    image: "/shots/meridian.jpg",
+    images: ["/shots/meridian.jpg"],
     tagline: {
       uz: "Sayohat rejalashtirish platformasi",
       en: "Travel planning platform",
@@ -481,7 +481,7 @@ export const projects: Project[] = [
   {
     slug: "library",
     title: "Library",
-    image: "/shots/library.jpg",
+    images: ["/shots/library.jpg"],
     tagline: {
       uz: "Onlayn kutubxona boshqaruv tizimi",
       en: "Online library management system",
