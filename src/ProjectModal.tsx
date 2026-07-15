@@ -1,21 +1,81 @@
 import { useEffect, useState } from 'react'
-import { ArrowUpRight, Check, ChevronLeft, ChevronRight, ExternalLink, Github, Lock, X } from 'lucide-react'
-import { t, type Lang, type Project } from './content'
+import {
+  ArrowUpRight,
+  Check,
+  ChevronLeft,
+  ChevronRight,
+  ExternalLink,
+  Github,
+  Lock,
+  Monitor,
+  Smartphone,
+  X,
+} from 'lucide-react'
+import { t, type Lang, type Project, type Shot } from './content'
 
-function Gallery({ images, title }: { images?: string[]; title: string }) {
+function Gallery({ images, title }: { images?: Shot[]; title: string }) {
+  const hasDesktop = !!images?.some((s) => s.device === 'desktop')
+  const hasMobile = !!images?.some((s) => s.device === 'mobile')
+  const [device, setDevice] = useState<'desktop' | 'mobile'>(hasDesktop ? 'desktop' : 'mobile')
   const [i, setI] = useState(0)
+
   if (!images || images.length === 0) return null
-  const many = images.length > 1
-  const go = (d: number) => setI((prev) => (prev + d + images.length) % images.length)
+
+  const list = images.filter((s) => s.device === device)
+  const idx = Math.min(i, Math.max(0, list.length - 1))
+  const many = list.length > 1
+  const bothDevices = hasDesktop && hasMobile
+  const isMobile = device === 'mobile'
+  const go = (d: number) =>
+    setI((prev) => (Math.min(prev, list.length - 1) + d + list.length) % list.length)
+
   return (
     <div className="mb-6">
-      <div className="relative overflow-hidden rounded-xl border border-ink-200 dark:border-ink-800">
-        <img
-          src={images[i]}
-          alt={`${title} — ${i + 1}`}
-          className="aspect-[16/10] w-full object-cover object-top"
-        />
-        {many && (
+      {bothDevices && (
+        <div className="mb-3 inline-flex rounded-full border border-ink-200 p-0.5 dark:border-ink-800">
+          {(['desktop', 'mobile'] as const).map((d) => (
+            <button
+              key={d}
+              onClick={() => {
+                setDevice(d)
+                setI(0)
+              }}
+              className={`flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold transition-colors ${
+                device === d
+                  ? 'bg-ink-900 text-white dark:bg-ink-100 dark:text-ink-900'
+                  : 'text-ink-600 hover:text-ink-900 dark:text-ink-400 dark:hover:text-ink-100'
+              }`}
+            >
+              {d === 'desktop' ? <Monitor size={13} /> : <Smartphone size={13} />}
+              {d === 'desktop' ? 'Desktop' : 'Mobile'}
+            </button>
+          ))}
+        </div>
+      )}
+
+      <div
+        className={
+          isMobile
+            ? 'flex justify-center rounded-xl border border-ink-200 bg-ink-50 py-5 dark:border-ink-800 dark:bg-ink-900/50'
+            : 'relative overflow-hidden rounded-xl border border-ink-200 dark:border-ink-800'
+        }
+      >
+        {isMobile ? (
+          <div className="w-[240px] overflow-hidden rounded-2xl border border-ink-300 shadow-lg dark:border-ink-700">
+            <img
+              src={list[idx]?.src}
+              alt={`${title} — mobile ${idx + 1}`}
+              className="block w-full object-cover object-top"
+            />
+          </div>
+        ) : (
+          <img
+            src={list[idx]?.src}
+            alt={`${title} — desktop ${idx + 1}`}
+            className="aspect-[16/10] w-full object-cover object-top"
+          />
+        )}
+        {many && !isMobile && (
           <>
             <button
               onClick={() => go(-1)}
@@ -32,25 +92,28 @@ function Gallery({ images, title }: { images?: string[]; title: string }) {
               <ChevronRight size={18} />
             </button>
             <span className="absolute bottom-2 right-2 rounded-full bg-black/55 px-2 py-0.5 text-[11px] font-semibold text-white">
-              {i + 1} / {images.length}
+              {idx + 1} / {list.length}
             </span>
           </>
         )}
       </div>
+
       {many && (
-        <div className="mt-2 flex gap-2 overflow-x-auto pb-1">
-          {images.map((src, idx) => (
+        <div className="mt-2 flex justify-center gap-2 overflow-x-auto pb-1">
+          {list.map((s, k) => (
             <button
-              key={src}
-              onClick={() => setI(idx)}
-              aria-label={`Screenshot ${idx + 1}`}
-              className={`h-14 w-24 flex-shrink-0 overflow-hidden rounded-lg border-2 transition-all ${
-                idx === i
+              key={s.src}
+              onClick={() => setI(k)}
+              aria-label={`Screenshot ${k + 1}`}
+              className={`flex-shrink-0 overflow-hidden rounded-lg border-2 transition-all ${
+                isMobile ? 'h-20 w-12' : 'h-14 w-24'
+              } ${
+                k === idx
                   ? 'border-ink-900 dark:border-ink-100'
                   : 'border-transparent opacity-60 hover:opacity-100'
               }`}
             >
-              <img src={src} alt="" className="h-full w-full object-cover object-top" />
+              <img src={s.src} alt="" className="h-full w-full object-cover object-top" />
             </button>
           ))}
         </div>

@@ -1,5 +1,7 @@
 export type Lang = "uz" | "en";
 
+export type Shot = { src: string; device: "desktop" | "mobile" };
+
 export type Project = {
   slug: string;
   title: string;
@@ -9,7 +11,7 @@ export type Project = {
   stack: string[];
   live?: string;
   github?: string;
-  images?: string[];
+  images?: Shot[];
   badge?: { uz: string; en: string };
   demo?: {
     label: { uz: string; en: string };
@@ -23,7 +25,10 @@ export const projects: Project[] = [
   {
     slug: "manajoy",
     title: "ManaJoy",
-    images: ["/shots/manajoy.jpg"],
+    images: [
+      { src: "/shots/manajoy.jpg", device: "desktop" },
+      { src: "/shots/manajoy-mobile.jpg", device: "mobile" },
+    ],
     tagline: {
       uz: "Onlayn marketplace — chegirmalar, do'konlar va xizmatlar",
       en: "Online marketplace — discounts, stores & services",
@@ -108,7 +113,7 @@ export const projects: Project[] = [
   {
     slug: "mathacademy",
     title: "MathAcademy Digital Campus",
-    images: ["/shots/mathacademy.jpg"],
+    images: [{ src: "/shots/mathacademy.jpg", device: "desktop" }],
     tagline: {
       uz: "Multi-tenant ta'lim boshqaruv platformasi",
       en: "Multi-tenant Learning Management System",
@@ -165,7 +170,7 @@ export const projects: Project[] = [
   {
     slug: "smdshop",
     title: "SMD Shop",
-    images: ["/shots/smdshop.jpg"],
+    images: [{ src: "/shots/smdshop.jpg", device: "desktop" }],
     tagline: {
       uz: "To'liq stack e-commerce platforma",
       en: "Full-stack e-commerce marketplace",
@@ -288,7 +293,7 @@ export const projects: Project[] = [
   {
     slug: "nexus",
     title: "Nexus",
-    images: ["/shots/nexus.jpg"],
+    images: [{ src: "/shots/nexus.jpg", device: "desktop" }],
     tagline: {
       uz: "Freelance va agentlik marketplace platformasi",
       en: "Freelance & agency marketplace",
@@ -357,7 +362,7 @@ export const projects: Project[] = [
   {
     slug: "meridian",
     title: "Meridian",
-    images: ["/shots/meridian.jpg"],
+    images: [{ src: "/shots/meridian.jpg", device: "desktop" }],
     tagline: {
       uz: "Sayohat rejalashtirish platformasi",
       en: "Travel planning platform",
@@ -481,7 +486,7 @@ export const projects: Project[] = [
   {
     slug: "library",
     title: "Library",
-    images: ["/shots/library.jpg"],
+    images: [{ src: "/shots/library.jpg", device: "desktop" }],
     tagline: {
       uz: "Onlayn kutubxona boshqaruv tizimi",
       en: "Online library management system",

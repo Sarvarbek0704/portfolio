@@ -92,11 +92,12 @@ function Reveal({
 }
 
 function ProjectThumb({ p, className }: { p: Project; className?: string }) {
+  const cover = p.images?.find((s) => s.device === 'desktop') ?? p.images?.[0]
   return (
     <div className={`relative overflow-hidden bg-ink-100 dark:bg-ink-800 ${className ?? ''}`}>
-      {p.images && p.images.length > 0 ? (
+      {cover ? (
         <img
-          src={p.images[0]}
+          src={cover.src}
           alt={p.title}
           loading="lazy"
           className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
