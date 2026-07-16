@@ -8,6 +8,7 @@ import {
   Github,
   Lock,
   Monitor,
+  Server,
   Smartphone,
   X,
 } from 'lucide-react'
@@ -210,6 +211,13 @@ export default function ProjectModal({
               </span>
             )}
           </div>
+
+          {project.selfHosted && (
+            <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-3 py-1.5 text-xs font-medium text-emerald-700 dark:text-emerald-400">
+              <Server size={13} />
+              {t.work.selfHosted[lang]} · Docker · Nginx · PostgreSQL
+            </div>
+          )}
 
           {/* Description */}
           <div className="mt-7">
