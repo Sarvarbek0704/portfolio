@@ -72,11 +72,12 @@ export const projects: Project[] = [
     category: { uz: "Marketplace · Xizmatlar", en: "Marketplace · Services" },
   },
   {
-    slug: "mathacademy",
-    title: "MathAcademy Digital Campus",
+    slug: "ziyo",
+    title: "Ziyo",
     images: [
-      { src: "/shots/mathacademy-desktop.jpg", device: "desktop" },
-      { src: "/shots/mathacademy-mobile.jpg", device: "mobile" },
+      { src: "/shots/ziyo-desktop.jpg", device: "desktop" },
+      { src: "/shots/ziyo-desktop-2.jpg", device: "desktop" },
+      { src: "/shots/ziyo-mobile.jpg", device: "mobile" },
     ],
     selfHosted: true,
     tagline: {
@@ -115,8 +116,8 @@ export const projects: Project[] = [
       "Framer Motion",
       "Vite",
     ],
-    live: "https://mathacademy.sarvarbek-sodiqov.uz",
-    github: "https://github.com/Sarvarbek0704/mathacademy_2",
+    live: "https://ziyo.sarvarbek-sodiqov.uz",
+    github: "https://github.com/Sarvarbek0704/ziyo",
     demo: {
       label: { uz: "Demo — maktab (tenant): mathacademy", en: "Demo — school (tenant): mathacademy" },
       entries: [
