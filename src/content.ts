@@ -341,12 +341,12 @@ export const projects: Project[] = [
     category: { uz: "Ta'lim · EdTech", en: "Education · EdTech" },
   },
   {
-    slug: "smdshop",
-    title: "SMD Shop",
+    slug: "karvon",
+    title: "Karvon",
     images: [
-      { src: "/shots/smdshop-desktop.jpg", device: "desktop" },
-      { src: "/shots/smdshop-desktop-2.jpg", device: "desktop" },
-      { src: "/shots/smdshop-mobile.jpg", device: "mobile" },
+      { src: "/shots/karvon-desktop.jpg", device: "desktop" },
+      { src: "/shots/karvon-desktop-2.jpg", device: "desktop" },
+      { src: "/shots/karvon-mobile.jpg", device: "mobile" },
     ],
     selfHosted: true,
     tagline: {
@@ -384,14 +384,14 @@ export const projects: Project[] = [
       "RTK Query",
       "Framer Motion",
     ],
-    live: "https://smdshop.sarvarbek-sodiqov.uz",
-    github: "https://github.com/Sarvarbek0704/online-shop",
+    live: "https://karvon.sarvarbek-sodiqov.uz",
+    github: "https://github.com/Sarvarbek0704/karvon",
     demo: {
       label: { uz: "Demo hisoblar", en: "Demo credentials" },
       entries: [
-        { role: "Admin", email: "demo.admin@smd.uz", password: "Demo12345!" },
-        { role: "Seller", email: "demo.seller@smd.uz", password: "Demo12345!" },
-        { role: "Buyer", email: "demo.user@smd.uz", password: "Demo12345!" },
+        { role: "Admin", email: "demo.admin@karvon.uz", password: "Demo12345!" },
+        { role: "Seller", email: "demo.seller@karvon.uz", password: "Demo12345!" },
+        { role: "Buyer", email: "demo.user@karvon.uz", password: "Demo12345!" },
       ],
     },
     year: "2026",
