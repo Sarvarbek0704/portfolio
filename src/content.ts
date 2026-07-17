@@ -132,6 +132,7 @@ export const projects: Project[] = [
     title: "Nexus",
     images: [
       { src: "/shots/nexus-desktop.jpg", device: "desktop" },
+      { src: "/shots/nexus-desktop-2.jpg", device: "desktop" },
       { src: "/shots/nexus-mobile.jpg", device: "mobile" },
     ],
     selfHosted: true,
