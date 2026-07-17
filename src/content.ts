@@ -27,7 +27,8 @@ export const projects: Project[] = [
     slug: "manajoy",
     title: "ManaJoy",
     images: [
-      { src: "/shots/manajoy.jpg", device: "desktop" },
+      { src: "/shots/manajoy-desktop.jpg", device: "desktop" },
+      { src: "/shots/manajoy-desktop-2.jpg", device: "desktop" },
       { src: "/shots/manajoy-mobile.jpg", device: "mobile" },
     ],
     tagline: {
@@ -73,7 +74,10 @@ export const projects: Project[] = [
   {
     slug: "mathacademy",
     title: "MathAcademy Digital Campus",
-    images: [{ src: "/shots/mathacademy.jpg", device: "desktop" }],
+    images: [
+      { src: "/shots/mathacademy-desktop.jpg", device: "desktop" },
+      { src: "/shots/mathacademy-mobile.jpg", device: "mobile" },
+    ],
     selfHosted: true,
     tagline: {
       uz: "Multi-tenant ta'lim boshqaruv platformasi",
@@ -125,7 +129,10 @@ export const projects: Project[] = [
   {
     slug: "nexus",
     title: "Nexus",
-    images: [{ src: "/shots/nexus.jpg", device: "desktop" }],
+    images: [
+      { src: "/shots/nexus-desktop.jpg", device: "desktop" },
+      { src: "/shots/nexus-mobile.jpg", device: "mobile" },
+    ],
     selfHosted: true,
     tagline: {
       uz: "Freelance va agentlik marketplace platformasi",
@@ -167,10 +174,10 @@ export const projects: Project[] = [
     demo: {
       label: { uz: "Demo hisoblar", en: "Demo credentials" },
       entries: [
-        { role: "Client", email: "demo.client@nexus.dev", password: "Nexus@1234" },
-        { role: "Freelancer", email: "demo.freelancer@nexus.dev", password: "Nexus@1234" },
-        { role: "Agency owner", email: "demo.agency@nexus.dev", password: "Nexus@1234" },
-        { role: "Admin", email: "demo.admin@nexus.dev", password: "Nexus@1234" },
+        { role: "Client", email: "demo.client@nexus.dev", password: "Demo@1234" },
+        { role: "Freelancer", email: "demo.freelancer@nexus.dev", password: "Demo@1234" },
+        { role: "Agency owner", email: "demo.agency@nexus.dev", password: "Demo@1234" },
+        { role: "Admin", email: "demo.admin@nexus.dev", password: "Demo@1234" },
       ],
     },
     year: "2026",
@@ -179,6 +186,11 @@ export const projects: Project[] = [
   {
     slug: "ustoz",
     title: "Ustoz",
+    images: [
+      { src: "/shots/ustoz-desktop.jpg", device: "desktop" },
+      { src: "/shots/ustoz-desktop-2.jpg", device: "desktop" },
+      { src: "/shots/ustoz-mobile.jpg", device: "mobile" },
+    ],
     tagline: {
       uz: "Jonli dars — WebRTC orqali sinf, yozib olinadi va qayta ko'riladi",
       en: "Live teaching — a real-time class over WebRTC, recorded and rewatchable",
@@ -224,6 +236,10 @@ export const projects: Project[] = [
   {
     slug: "helix",
     title: "Helix",
+    images: [
+      { src: "/shots/helix-desktop.jpg", device: "desktop" },
+      { src: "/shots/helix-mobile.jpg", device: "mobile" },
+    ],
     selfHosted: true,
     tagline: {
       uz: "Klinika va kasalxonalar uchun boshqaruv platformasi",
@@ -277,6 +293,11 @@ export const projects: Project[] = [
   {
     slug: "wisar",
     title: "Wisar",
+    images: [
+      { src: "/shots/wisar-desktop.jpg", device: "desktop" },
+      { src: "/shots/wisar-desktop-2.jpg", device: "desktop" },
+      { src: "/shots/wisar-mobile.jpg", device: "mobile" },
+    ],
     tagline: {
       uz: "Dasturlash va ingliz tili o'rganish platformasi",
       en: "Programming & English learning platform",
@@ -319,7 +340,11 @@ export const projects: Project[] = [
   {
     slug: "smdshop",
     title: "SMD Shop",
-    images: [{ src: "/shots/smdshop.jpg", device: "desktop" }],
+    images: [
+      { src: "/shots/smdshop-desktop.jpg", device: "desktop" },
+      { src: "/shots/smdshop-desktop-2.jpg", device: "desktop" },
+      { src: "/shots/smdshop-mobile.jpg", device: "mobile" },
+    ],
     selfHosted: true,
     tagline: {
       uz: "To'liq stack e-commerce platforma",
@@ -375,6 +400,10 @@ export const projects: Project[] = [
   {
     slug: "trellis",
     title: "Trellis",
+    images: [
+      { src: "/shots/trellis-desktop.jpg", device: "desktop" },
+      { src: "/shots/trellis-mobile.jpg", device: "mobile" },
+    ],
     selfHosted: true,
     tagline: {
       uz: "Multi-tenant jamoa loyiha-boshqaruv platformasi",
@@ -420,7 +449,10 @@ export const projects: Project[] = [
   {
     slug: "meridian",
     title: "Meridian",
-    images: [{ src: "/shots/meridian.jpg", device: "desktop" }],
+    images: [
+      { src: "/shots/meridian-desktop.jpg", device: "desktop" },
+      { src: "/shots/meridian-mobile.jpg", device: "mobile" },
+    ],
     selfHosted: true,
     tagline: {
       uz: "Sayohat rejalashtirish platformasi",
@@ -471,7 +503,11 @@ export const projects: Project[] = [
   {
     slug: "library",
     title: "Library",
-    images: [{ src: "/shots/library.jpg", device: "desktop" }],
+    images: [
+      { src: "/shots/library-desktop.jpg", device: "desktop" },
+      { src: "/shots/library-desktop-2.jpg", device: "desktop" },
+      { src: "/shots/library-mobile.jpg", device: "mobile" },
+    ],
     selfHosted: true,
     tagline: {
       uz: "Onlayn kutubxona boshqaruv tizimi",
