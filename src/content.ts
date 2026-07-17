@@ -463,6 +463,7 @@ export const projects: Project[] = [
     title: "Meridian",
     images: [
       { src: "/shots/meridian-desktop.jpg", device: "desktop" },
+      { src: "/shots/meridian-desktop-2.jpg", device: "desktop" },
       { src: "/shots/meridian-mobile.jpg", device: "mobile" },
     ],
     selfHosted: true,
