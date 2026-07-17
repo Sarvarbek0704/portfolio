@@ -514,12 +514,12 @@ export const projects: Project[] = [
     category: { uz: "Sayohat · Lifestyle", en: "Travel · Lifestyle" },
   },
   {
-    slug: "library",
-    title: "Library",
+    slug: "javon",
+    title: "Javon",
     images: [
-      { src: "/shots/library-desktop.jpg", device: "desktop" },
-      { src: "/shots/library-desktop-2.jpg", device: "desktop" },
-      { src: "/shots/library-mobile.jpg", device: "mobile" },
+      { src: "/shots/javon-desktop.jpg", device: "desktop" },
+      { src: "/shots/javon-desktop-2.jpg", device: "desktop" },
+      { src: "/shots/javon-mobile.jpg", device: "mobile" },
     ],
     selfHosted: true,
     tagline: {
@@ -558,8 +558,8 @@ export const projects: Project[] = [
       "TailwindCSS",
       "Recharts",
     ],
-    live: "https://library.sarvarbek-sodiqov.uz",
-    github: "https://github.com/Sarvarbek0704/library",
+    live: "https://javon.sarvarbek-sodiqov.uz",
+    github: "https://github.com/Sarvarbek0704/javon",
     demo: {
       label: { uz: "Demo hisob (Admin)", en: "Demo credentials (Admin)" },
       entries: [
