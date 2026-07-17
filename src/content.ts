@@ -240,6 +240,7 @@ export const projects: Project[] = [
     title: "Helix",
     images: [
       { src: "/shots/helix-desktop.jpg", device: "desktop" },
+      { src: "/shots/helix-desktop-2.jpg", device: "desktop" },
       { src: "/shots/helix-mobile.jpg", device: "mobile" },
     ],
     selfHosted: true,
