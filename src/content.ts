@@ -405,6 +405,7 @@ export const projects: Project[] = [
     title: "Trellis",
     images: [
       { src: "/shots/trellis-desktop.jpg", device: "desktop" },
+      { src: "/shots/trellis-desktop-2.jpg", device: "desktop" },
       { src: "/shots/trellis-mobile.jpg", device: "mobile" },
     ],
     selfHosted: true,
@@ -446,6 +447,14 @@ export const projects: Project[] = [
     ],
     live: "https://trellis.sarvarbek-sodiqov.uz",
     github: "https://github.com/Sarvarbek0704/trellis",
+    demo: {
+      label: { uz: "Demo hisoblar (workspace: Demo)", en: "Demo credentials (workspace: Demo)" },
+      entries: [
+        { role: "Owner", email: "admin@trellis.local", password: "Demo@1234" },
+        { role: "Admin", email: "pm@trellis.local", password: "Demo@1234" },
+        { role: "Member", email: "dev@trellis.local", password: "Demo@1234" },
+      ],
+    },
     year: "2026",
     category: { uz: "Productivity · SaaS", en: "Productivity · SaaS" },
   },
