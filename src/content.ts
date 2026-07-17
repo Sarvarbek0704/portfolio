@@ -308,19 +308,19 @@ export const projects: Project[] = [
     badge: { uz: "Jonli mahsulot · Yakka", en: "Live product · Solo" },
     selfHosted: true,
     description: {
-      uz: "O'zbek tilidagi bepul ta'lim platformasi — noldan senior+ gacha to'liq full-stack dasturlash kursi, 499+ maqola va 34+ bo'lim, ingliz tili va IELTS moduli. Interaktiv mashqlar, SM-2 spaced repetition flashcardlari, kunlik planner va streak tizimi bilan bilimni amaliyotga bog'laydi. Ushbu platformani boshidan oxirigacha o'zim ishlab chiqdim va o'z serverimda, o'z domenimda ishga tushirdim.",
-      en: "A free Uzbek-language learning platform — a full-stack programming course from zero to senior+, 499+ articles across 34+ sections, plus English and IELTS modules. It ties theory to practice with interactive exercises, SM-2 spaced-repetition flashcards, a daily planner and a streak system. I built this platform end-to-end on my own and run it on my own server, on my own domain.",
+      uz: "O'zbek tilidagi bepul ta'lim platformasi — noldan senior+ gacha to'liq full-stack dasturlash kursi, 706+ maqola va 41+ bo'lim, ingliz tili va IELTS moduli. Interaktiv mashqlar, SM-2 spaced repetition flashcardlari, kunlik planner va streak tizimi bilan bilimni amaliyotga bog'laydi. Ushbu platformani boshidan oxirigacha o'zim ishlab chiqdim va o'z serverimda, o'z domenimda ishga tushirdim.",
+      en: "A free Uzbek-language learning platform — a full-stack programming course from zero to senior+, 706+ articles across 41+ sections, plus English and IELTS modules. It ties theory to practice with interactive exercises, SM-2 spaced-repetition flashcards, a daily planner and a streak system. I built this platform end-to-end on my own and run it on my own server, on my own domain.",
     },
     highlights: {
       uz: [
-        "499+ maqola, 34+ bo'lim — noldan senior+ gacha kurs",
+        "706+ maqola, 41+ bo'lim — noldan senior+ gacha kurs",
         "Interaktiv mashqlar: kod yozish, quiz, bo'sh joyni to'ldirish",
         "SM-2 algoritmi asosidagi spaced repetition flashcard tizimi",
         "IELTS Coach — mock testlar va progress kuzatuvi",
         "Kunlik planner, streak va progress dashboard (haftalik hisobot, sertifikat)",
       ],
       en: [
-        "499+ articles across 34+ sections — a zero-to-senior+ course",
+        "706+ articles across 41+ sections — a zero-to-senior+ course",
         "Interactive exercises: coding challenges, quizzes, fill-in-the-blank",
         "SM-2 spaced-repetition flashcard system",
         "IELTS Coach — mock tests and progress tracking",
