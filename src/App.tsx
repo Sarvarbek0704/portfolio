@@ -12,7 +12,6 @@ import {
   Moon,
   Phone,
   Send,
-  Server,
   Sun,
   X,
 } from 'lucide-react'
@@ -147,7 +146,6 @@ export default function App() {
 
       <main>
         <Hero lang={lang} onResumeClick={() => setResumeOpen(true)} />
-        <InfraBand lang={lang} />
         <Work lang={lang} onOpenProject={setActiveProject} />
         <About lang={lang} />
         <Skills lang={lang} />
@@ -373,36 +371,6 @@ function Hero({ lang, onResumeClick }: { lang: Lang; onResumeClick: () => void }
             </div>
           </div>
         </div>
-    </section>
-  )
-}
-
-/* ---------- INFRA BAND ---------- */
-
-function InfraBand({ lang }: { lang: Lang }) {
-  const stats = [
-    { v: t.infra.stat1v[lang], k: t.infra.stat1[lang] },
-    { v: t.infra.stat2v[lang], k: t.infra.stat2[lang] },
-    { v: t.infra.stat3v[lang], k: t.infra.stat3[lang] },
-  ]
-  return (
-    <section className="border-t border-ink-200 bg-ink-50/60 dark:border-ink-800 dark:bg-ink-900/40">
-      <div className="mx-auto max-w-6xl px-5 py-10 sm:px-8 sm:py-12">
-        <Reveal>
-          <div className="grid gap-8 sm:grid-cols-3 sm:gap-6">
-            {stats.map((s) => (
-              <div key={s.k} className="text-center sm:text-left">
-                <div className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl">{s.v}</div>
-                <div className="mt-1.5 text-sm font-medium text-ink-600 dark:text-ink-400">{s.k}</div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 flex items-center justify-center gap-2.5 rounded-full border border-ink-200 bg-white px-4 py-2.5 text-center text-xs font-medium text-ink-600 dark:border-ink-800 dark:bg-ink-950 dark:text-ink-400 sm:mx-auto sm:w-fit">
-            <Server size={14} className="flex-shrink-0 text-emerald-600 dark:text-emerald-400" />
-            <span>{t.infra.note[lang]}</span>
-          </div>
-        </Reveal>
-      </div>
     </section>
   )
 }
