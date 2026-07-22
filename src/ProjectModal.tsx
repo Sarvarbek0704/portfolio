@@ -148,11 +148,11 @@ export default function ProjectModal({
       onClick={onClose}
     >
       <div
-        className="relative max-h-[92vh] w-full max-w-3xl overflow-hidden rounded-t-3xl bg-white shadow-2xl dark:bg-ink-900 sm:rounded-3xl animate-fade-up"
+        className="relative flex max-h-[92vh] w-full max-w-3xl flex-col overflow-hidden rounded-t-3xl bg-white shadow-2xl dark:bg-ink-900 sm:rounded-3xl animate-fade-up"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Sticky header */}
-        <div className="sticky top-0 z-10 flex items-start justify-between gap-4 border-b border-ink-200 bg-white/95 px-6 py-5 backdrop-blur dark:border-ink-800 dark:bg-ink-900/95 sm:px-8">
+        {/* Header */}
+        <div className="flex flex-shrink-0 items-start justify-between gap-4 border-b border-ink-200 bg-white px-6 py-5 dark:border-ink-800 dark:bg-ink-900 sm:px-8">
           <div className="min-w-0">
             {project.badge && (
               <span className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-emerald-700 dark:text-emerald-400">
@@ -177,7 +177,7 @@ export default function ProjectModal({
         </div>
 
         {/* Scrollable content */}
-        <div className="overflow-y-auto px-6 py-6 sm:px-8" style={{ maxHeight: 'calc(92vh - 90px)' }}>
+        <div className="min-h-0 flex-1 overflow-y-auto px-6 py-6 sm:px-8">
           <Gallery key={project.slug} images={project.images} title={project.title} />
           <p className="text-lg font-medium text-ink-700 dark:text-ink-300">{project.tagline[lang]}</p>
 
