@@ -73,7 +73,7 @@ function Gallery({ images, title }: { images?: Shot[]; title: string }) {
           <img
             src={list[idx]?.src}
             alt={`${title} — desktop ${idx + 1}`}
-            className="aspect-[16/10] w-full object-cover object-top"
+            className="block h-auto w-full"
           />
         )}
         {many && !isMobile && (
