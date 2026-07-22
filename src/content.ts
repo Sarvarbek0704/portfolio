@@ -27,9 +27,12 @@ export const projects: Project[] = [
     slug: "manajoy",
     title: "ManaJoy",
     images: [
-      { src: "/shots/manajoy-desktop.jpg", device: "desktop" },
+      { src: "/shots/manajoy-desktop-1.jpg", device: "desktop" },
       { src: "/shots/manajoy-desktop-2.jpg", device: "desktop" },
-      { src: "/shots/manajoy-mobile.jpg", device: "mobile" },
+      { src: "/shots/manajoy-mobile-1.jpg", device: "mobile" },
+      { src: "/shots/manajoy-mobile-2.jpg", device: "mobile" },
+      { src: "/shots/manajoy-mobile-3.jpg", device: "mobile" },
+      { src: "/shots/manajoy-mobile-4.jpg", device: "mobile" },
     ],
     tagline: {
       uz: "Onlayn marketplace — chegirmalar, do'konlar va xizmatlar",
