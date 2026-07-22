@@ -142,9 +142,13 @@ export const projects: Project[] = [
     slug: "nexus",
     title: "Nexus",
     images: [
-      { src: "/shots/nexus-desktop.jpg", device: "desktop" },
-      { src: "/shots/nexus-desktop-2.jpg", device: "desktop" },
-      { src: "/shots/nexus-mobile.jpg", device: "mobile" },
+      { src: "/shots/nexus-desktop-1.png", device: "desktop" },
+      { src: "/shots/nexus-desktop-2.png", device: "desktop" },
+      { src: "/shots/nexus-desktop-3.png", device: "desktop" },
+      { src: "/shots/nexus-desktop-4.png", device: "desktop" },
+      { src: "/shots/nexus-desktop-5.png", device: "desktop" },
+      { src: "/shots/nexus-desktop-6.png", device: "desktop" },
+      { src: "/shots/nexus-desktop-7.png", device: "desktop" },
     ],
     selfHosted: true,
     tagline: {
