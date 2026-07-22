@@ -247,6 +247,14 @@ export const projects: Project[] = [
     ],
     live: "https://ustoz.sarvarbek-sodiqov.uz",
     github: "https://github.com/Sarvarbek0704/ustoz",
+    demo: {
+      label: { uz: "Demo hisoblar", en: "Demo credentials" },
+      entries: [
+        { role: "Student", email: "demo.student@ustoz.uz", password: "Demo1234!" },
+        { role: "Teacher", email: "demo.teacher@ustoz.uz", password: "Demo1234!" },
+        { role: "Admin", email: "demo.admin@ustoz.uz", password: "Demo1234!" },
+      ],
+    },
     year: "2026",
     category: { uz: "Ta'lim · Jonli dars", en: "Education · Live teaching" },
   },
