@@ -21,7 +21,7 @@ const L = {
   en: {
     loc: 'Tashkent, Uzbekistan',
     summary:
-      "Full-Stack Web Developer currently working as a frontend developer at ManaJoy, building a real, nationwide marketplace and its internal admin panel with React, Next.js and TypeScript. Alongside my job I built and shipped the wisar.uz learning platform, plus seven more production-grade full-stack applications end-to-end — spanning healthcare, e-commerce, education, freelance marketplaces, travel, team collaboration and library management. Comfortable with multi-tenant database schemas, RBAC, JWT, real-time features, escrow flows and OAuth. I care deeply about clean architecture, security and user experience.",
+      "Full-Stack Web Developer, currently a frontend developer at ManaJoy building a nationwide marketplace and its admin panel with React, Next.js and TypeScript. Beyond my job I've shipped nine production-grade full-stack applications end-to-end — and I don't just write them, I deploy and operate them: each runs on my own VPS with Docker, Nginx, PostgreSQL and automated HTTPS. One, a live-teaching platform, has a paying client. I'm fluent in multi-tenant schemas, RBAC, JWT, real-time features, escrow flows and OAuth, and I care about clean architecture, security and actually shipping.",
     skillsLabel: 'TECHNICAL SKILLS',
     workLabel: 'WORK EXPERIENCE',
     projectsLabel: 'FEATURED PROJECTS',
@@ -36,7 +36,7 @@ const L = {
       ['Frontend', 'React · Next.js · TypeScript · Redux Toolkit · RTK Query · TanStack Query · Tailwind CSS · SCSS · Vite'],
       ['Backend', 'Node.js · NestJS · Express · REST API · GraphQL · WebSocket · JWT / OAuth · Prisma · TypeORM · Sequelize'],
       ['Databases', 'PostgreSQL · MongoDB · MySQL · Redis'],
-      ['DevOps & Tools', 'Git · Docker · CI/CD · Vercel · Render · Railway · Netlify · Swagger · Figma'],
+      ['DevOps & Tools', 'Git · Docker · Nginx · Linux (VPS) · Let’s Encrypt · CI/CD · Swagger · Figma'],
     ],
     work: [
       {
@@ -44,6 +44,12 @@ const L = {
         period: 'May 2026 — Present',
         desc: 'Building the customer-facing marketplace and internal admin panel for a nationwide platform (discounts, stores, services, loyalty). Product and store catalogs, "nearby stores" maps and geolocation via MapLibre GL, order tracking, loyalty/points and reservation flows. Working within a team led by a project manager.',
         stack: 'React · Next.js · TypeScript · TailwindCSS · shadcn/ui · MapLibre GL · TanStack Query · React Hook Form · Zod',
+      },
+      {
+        role: 'Najot Ta’lim — Full-Stack Developer',
+        period: 'Oct 2025 — Mar 2026',
+        desc: 'Full-stack web development for six months at the academy where I trained: built and maintained features across the frontend and backend with React, Node.js/NestJS and PostgreSQL, working from requirements to shipped, reviewed code.',
+        stack: 'React · Node.js · NestJS · TypeScript · PostgreSQL',
       },
     ],
     education: [
@@ -55,7 +61,7 @@ const L = {
   uz: {
     loc: "Toshkent, O'zbekiston",
     summary:
-      "Full-Stack Web Developer. Hozir ManaJoy'da frontend dasturchi sifatida ishlayapman — O'zbekiston bo'ylab ishlaydigan real marketplace va uning ichki admin panelini React, Next.js va TypeScript'da rivojlantiraman. Ishdan tashqari wisar.uz ta'lim platformasini va yana 7 ta production darajadagi to'liq stack ilovani boshidan oxirigacha o'zim qurdim — tibbiyot, e-commerce, ta'lim, freelance marketplace, sayohat, jamoa boshqaruvi va kutubxona sohalarida. Multi-tenant DB sxemalari, RBAC, JWT, real-time, escrow va OAuth bilan ishlayman. Toza arxitektura, xavfsizlik va foydalanuvchi tajribasiga jiddiy yondashaman.",
+      "Full-Stack Web Developer. Hozir ManaJoy'da frontend dasturchi — O'zbekiston bo'ylab ishlaydigan marketplace va uning admin panelini React, Next.js va TypeScript'da rivojlantiraman. Ishdan tashqari 9 ta production darajadagi to'liq stack ilovani boshidan oxirigacha qurdim — va ularni faqat yozmayman, o'zim deploy qilib ishlataman: har biri o'z VPS serverimda Docker, Nginx, PostgreSQL va avtomatik HTTPS bilan ishlaydi. Bittasi — jonli dars platformasi — to'lovchi mijozga ega. Multi-tenant sxemalar, RBAC, JWT, real-time, escrow va OAuth bilan erkin ishlayman; toza arxitektura, xavfsizlik va mahsulotni yetkazishga jiddiy qarayman.",
     skillsLabel: "TEXNIK KO'NIKMALAR",
     workLabel: 'ISH TAJRIBASI',
     projectsLabel: 'ASOSIY LOYIHALAR',
@@ -70,7 +76,7 @@ const L = {
       ['Frontend', 'React · Next.js · TypeScript · Redux Toolkit · RTK Query · TanStack Query · Tailwind CSS · SCSS · Vite'],
       ['Backend', 'Node.js · NestJS · Express · REST API · GraphQL · WebSocket · JWT · Prisma · TypeORM · Sequelize'],
       ["Ma'lumotlar bazasi", 'PostgreSQL · MongoDB · MySQL · Redis'],
-      ['DevOps va vositalar', 'Git · Docker · CI/CD · Vercel · Render · Railway · Netlify · Swagger · Figma'],
+      ['DevOps va vositalar', 'Git · Docker · Nginx · Linux (VPS) · Let’s Encrypt · CI/CD · Swagger · Figma'],
     ],
     work: [
       {
@@ -78,6 +84,12 @@ const L = {
         period: '2026-may — hozir',
         desc: "O'zbekiston bo'ylab ishlaydigan marketplace (chegirmalar, do'konlar, xizmatlar, loyalty) mijozlar sayti va ichki admin panelini rivojlantiraman. Mahsulot va do'kon kataloglari, MapLibre GL bilan \"yaqin do'konlar\" xaritasi va geolokatsiya, buyurtma kuzatuvi, loyalty va bron oqimlari. Project manager rahbarligida jamoada ishlayman.",
         stack: 'React · Next.js · TypeScript · TailwindCSS · shadcn/ui · MapLibre GL · TanStack Query · React Hook Form · Zod',
+      },
+      {
+        role: 'Najot Ta’lim — Full-Stack dasturchi',
+        period: '2025-okt — 2026-mart',
+        desc: "O'zim o'qigan akademiyada 6 oy full-stack dasturchi: React, Node.js/NestJS va PostgreSQL bilan frontend va backend funksiyalarini qurdim va rivojlantirdim — talabdan tortib yetkazilgan, review qilingan kodgacha.",
+        stack: 'React · Node.js · NestJS · TypeScript · PostgreSQL',
       },
     ],
     education: [
@@ -88,76 +100,84 @@ const L = {
   },
 }
 
-/* project catalog (en + uz) */
+/* project catalog (en + uz) — all live and self-hosted on my own VPS */
 const P = {
   wisar: {
     en: { title: 'Wisar — Programming & English Learning Platform', url: 'wisar.uz',
-      desc: 'A free Uzbek-language EdTech platform I built and shipped end-to-end: a zero-to-senior+ programming course with 499+ articles across 34+ sections, interactive coding exercises and quizzes, SM-2 spaced-repetition flashcards, an IELTS coach with mock tests, a daily planner, streaks and a progress dashboard with certificates.',
+      desc: 'A free Uzbek-language EdTech platform I built and shipped end-to-end: a zero-to-senior+ programming course with 706+ articles across 41+ sections, interactive coding exercises and quizzes, SM-2 spaced-repetition flashcards, an IELTS coach with mock tests, a daily planner, streaks and a progress dashboard with certificates.',
       stack: 'Next.js · React · TypeScript · TailwindCSS · Redux Toolkit · TanStack Query · Framer Motion' },
     uz: { title: "Wisar — Dasturlash va ingliz tili platformasi", url: 'wisar.uz',
-      desc: "O'zbek tilidagi bepul ta'lim platformasi, boshidan oxirigacha o'zim qurdim: noldan senior+ gacha dasturlash kursi (499+ maqola, 34+ bo'lim), interaktiv mashqlar va quizlar, SM-2 spaced repetition flashcardlari, IELTS coach (mock testlar), kunlik planner, streak va sertifikatli progress dashboard.",
+      desc: "O'zbek tilidagi bepul ta'lim platformasi, boshidan oxirigacha o'zim qurdim: noldan senior+ gacha dasturlash kursi (706+ maqola, 41+ bo'lim), interaktiv mashqlar va quizlar, SM-2 spaced repetition flashcardlari, IELTS coach (mock testlar), kunlik planner, streak va sertifikatli progress dashboard.",
       stack: 'Next.js · React · TypeScript · TailwindCSS · Redux Toolkit · TanStack Query · Framer Motion' },
   },
-  mathacademy: {
-    en: { title: 'MathAcademy Digital Campus — Multi-tenant LMS Platform', url: 'v0-mathacademy-2.vercel.app · github.com/Sarvarbek0704/mathacademy_2',
-      desc: 'Full-featured Learning & Student Information System on a multi-tenant architecture: 56 database models, 28 feature modules, granular RBAC, JWT auth with refresh-token rotation, brute-force protection and audit logging. 30+ staff pages and a dedicated 12-page guardian portal.',
-      stack: 'NestJS 11 · Prisma 7 · PostgreSQL · Redis · React 18 · TypeScript · TailwindCSS · shadcn/ui · TanStack Query · Framer Motion · Vite' },
-    uz: { title: 'MathAcademy Digital Campus — Multi-tenant LMS', url: 'v0-mathacademy-2.vercel.app · github.com/Sarvarbek0704/mathacademy_2',
-      desc: "Ta'lim muassasalari uchun multi-tenant LMS/SIS platforma: 28 ta funksional modul, 56 ta DB modeli, granular RBAC, JWT (access + refresh), brute-force himoya, audit log. 30+ xodim sahifasi va 12 sahifalik alohida ota-ona paneli.",
-      stack: 'NestJS 11 · Prisma 7 · PostgreSQL · Redis · React 18 · TypeScript · TailwindCSS · shadcn/ui · TanStack Query · Framer Motion · Vite' },
+  ziyo: {
+    en: { title: 'Ziyo — Multi-tenant School Management System (SIS + LMS)', url: 'ziyo.sarvarbek-sodiqov.uz · github.com/Sarvarbek0704/ziyo',
+      desc: 'Full-featured Student Information & Learning system on a multi-tenant architecture: 56 database models, 28 feature modules, granular RBAC, JWT auth with refresh-token rotation, brute-force protection and audit logging. 30+ staff pages and a dedicated 12-page guardian portal — tenant isolation enforced by the data layer.',
+      stack: 'NestJS 11 · Prisma 7 · PostgreSQL · React 18 · TypeScript · TailwindCSS · shadcn/ui · TanStack Query · Vite' },
+    uz: { title: 'Ziyo — Multi-tenant maktab boshqaruv tizimi (SIS + LMS)', url: 'ziyo.sarvarbek-sodiqov.uz · github.com/Sarvarbek0704/ziyo',
+      desc: "Ta'lim muassasalari uchun multi-tenant SIS/LMS: 56 ta DB modeli, 28 ta modul, granular RBAC, JWT (access + refresh rotation), brute-force himoya, audit log. 30+ xodim sahifasi va 12 sahifalik ota-ona paneli — tenant izolyatsiyasi ma'lumot qatlamida majburlanadi.",
+      stack: 'NestJS 11 · Prisma 7 · PostgreSQL · React 18 · TypeScript · TailwindCSS · shadcn/ui · TanStack Query · Vite' },
   },
-  smdshop: {
-    en: { title: 'SMD Shop — Full-Stack E-Commerce Platform', url: 'online-shop-puce-xi.vercel.app · github.com/Sarvarbek0704/online-shop',
-      desc: 'Complete e-commerce marketplace for the Uzbek market with four roles (Admin, Seller, Buyer, Courier), 26 entities, real-time chat via Socket.io, and a fully simulated Payme/Click/Uzum payment system with token-based payment pages and webhook endpoints. Image optimization via Sharp.',
-      stack: 'NestJS 11 · TypeORM · PostgreSQL (Neon) · Socket.io · React 19 · TypeScript · TailwindCSS 4 · RTK Query · Framer Motion' },
-    uz: { title: 'SMD Shop — E-commerce platforma', url: 'online-shop-puce-xi.vercel.app · github.com/Sarvarbek0704/online-shop',
-      desc: "O'zbekiston bozori uchun to'liq funksional e-commerce: 4 ta rol (Admin, Sotuvchi, Xaridor, Kuryer), 26 ta entity, Socket.io real-time chat, Payme/Click/Uzum simulyator to'lov tizimi (token, PIN klaviaturasi, webhook), Sharp bilan rasm optimizatsiyasi.",
-      stack: 'NestJS 11 · TypeORM · PostgreSQL (Neon) · Socket.io · React 19 · TypeScript · TailwindCSS 4 · RTK Query · Framer Motion' },
+  ustoz: {
+    en: { title: 'Ustoz — Live-Teaching Platform (WebRTC) · has a paying client', url: 'ustoz.sarvarbek-sodiqov.uz · github.com/Sarvarbek0704/ustoz',
+      desc: 'A real, sellable product with a paying client: teachers run live group classes over WebRTC (LiveKit), sessions are recorded to durable storage and rewatched by enrolled students, with auto-graded quizzes, teacher-graded assignments, attendance and watch-tracking. Interface in Uzbek, Russian and English.',
+      stack: 'Next.js 16 · LiveKit (WebRTC) · Prisma · PostgreSQL · NextAuth · Cloudflare R2 (S3) · TypeScript · TailwindCSS' },
+    uz: { title: "Ustoz — Jonli dars platformasi (WebRTC) · to'lovchi mijozli", url: 'ustoz.sarvarbek-sodiqov.uz · github.com/Sarvarbek0704/ustoz',
+      desc: "To'lovchi mijozi bor real mahsulot: ustozlar WebRTC (LiveKit) orqali jonli guruh darslari o'tadi, darslar saqlanib enrollment orqali qayta ko'riladi, avtomatik baholanadigan testlar, ustoz baholaydigan uy ishlari, davomat va watch-tracking. Interfeys o'zbek, rus va ingliz tillarida.",
+      stack: 'Next.js 16 · LiveKit (WebRTC) · Prisma · PostgreSQL · NextAuth · Cloudflare R2 (S3) · TypeScript · TailwindCSS' },
   },
   nexus: {
-    en: { title: 'Nexus — Freelance & Agency Marketplace', url: 'nexus-beryl-nu.vercel.app · github.com/Sarvarbek0704/nexus',
+    en: { title: 'Nexus — Freelance & Agency Marketplace', url: 'nexus.sarvarbek-sodiqov.uz · github.com/Sarvarbek0704/nexus',
       desc: 'Upwork-style marketplace with four roles (Client, Freelancer, Agency Owner, Admin), 25 entities, and a milestone-based escrow payment system using a greedy debt-settlement algorithm. JWT auth alongside Google and GitHub OAuth (Passport.js), platform commission tracking, full dispute resolution module and in-app messaging.',
       stack: 'NestJS 10 · TypeORM · PostgreSQL · Next.js 14 · TypeScript · Redux Toolkit + RTK Query · TailwindCSS · Recharts' },
-    uz: { title: 'Nexus — Freelance marketplace', url: 'nexus-beryl-nu.vercel.app · github.com/Sarvarbek0704/nexus',
-      desc: "Upwork tipidagi platforma: 4 ta rol (Klient, Freelanser, Agentlik egasi, Admin), 25 ta entity, milestone asosidagi escrow to'lov tizimi (greedy algoritmi), JWT + Google va GitHub OAuth (Passport.js), platforma komissiyasi, nizo hal qilish moduli, ichki messaging.",
+    uz: { title: 'Nexus — Freelance marketplace', url: 'nexus.sarvarbek-sodiqov.uz · github.com/Sarvarbek0704/nexus',
+      desc: "Upwork tipidagi platforma: 4 ta rol (Klient, Freelanser, Agentlik egasi, Admin), 25 ta entity, milestone asosidagi escrow to'lov tizimi (greedy debt-settlement algoritmi), JWT + Google va GitHub OAuth (Passport.js), platforma komissiyasi, nizo hal qilish moduli, ichki messaging.",
       stack: 'NestJS 10 · TypeORM · PostgreSQL · Next.js 14 · TypeScript · Redux Toolkit + RTK Query · TailwindCSS · Recharts' },
   },
   helix: {
-    en: { title: 'Helix — Healthcare Management Platform', url: 'github.com/Sarvarbek0704/helix',
+    en: { title: 'Helix — Healthcare Management Platform', url: 'helix.sarvarbek-sodiqov.uz · github.com/Sarvarbek0704/helix',
       desc: 'Full-stack hospital and clinic management system serving five roles (Patient, Doctor, Nurse, Lab Technician, Admin) with role-specific dashboards. Models the complete clinical workflow: appointment → consultation → medical record → prescription → lab order → results → billing → insurance claim. 18 entities, vitals tracking, OTP email verification.',
       stack: 'NestJS 10 · TypeORM · PostgreSQL · Next.js 14 · TypeScript · RTK Query · TailwindCSS · Framer Motion' },
-    uz: { title: 'Helix — Tibbiyot boshqaruv platformasi', url: 'github.com/Sarvarbek0704/helix',
+    uz: { title: 'Helix — Tibbiyot boshqaruv platformasi', url: 'helix.sarvarbek-sodiqov.uz · github.com/Sarvarbek0704/helix',
       desc: "Klinika va kasalxonalar uchun to'liq tibbiyot tizimi: 5 ta rol uchun alohida dashboardlar (Bemor, Shifokor, Hamshira, Lab texnik, Admin), 18 ta entity, to'liq klinik workflow (qabul → ko'rik → tibbiy yozuv → retsept → lab → natija → hisob-faktura → sug'urta), hayotiy ko'rsatkichlar tracking, OTP email tasdiqlash.",
       stack: 'NestJS 10 · TypeORM · PostgreSQL · Next.js 14 · TypeScript · RTK Query · TailwindCSS · Framer Motion' },
   },
+  karvon: {
+    en: { title: 'Karvon — Multi-vendor E-Commerce Marketplace', url: 'karvon.sarvarbek-sodiqov.uz · github.com/Sarvarbek0704/karvon',
+      desc: 'Complete e-commerce marketplace for the Uzbek market with four roles (Admin, Seller, Buyer, Courier), 26 entities, real-time chat via Socket.io, and a fully simulated Payme/Click/Uzum payment system with token-based payment pages and webhook endpoints. Image optimization via Sharp.',
+      stack: 'NestJS 11 · TypeORM · PostgreSQL · Socket.io · React 19 · TypeScript · TailwindCSS 4 · RTK Query · Framer Motion' },
+    uz: { title: 'Karvon — Ko\'p sotuvchili e-commerce marketplace', url: 'karvon.sarvarbek-sodiqov.uz · github.com/Sarvarbek0704/karvon',
+      desc: "O'zbekiston bozori uchun to'liq funksional e-commerce: 4 ta rol (Admin, Sotuvchi, Xaridor, Kuryer), 26 ta entity, Socket.io real-time chat, Payme/Click/Uzum simulyator to'lov tizimi (token, webhook), Sharp bilan rasm optimizatsiyasi.",
+      stack: 'NestJS 11 · TypeORM · PostgreSQL · Socket.io · React 19 · TypeScript · TailwindCSS 4 · RTK Query · Framer Motion' },
+  },
+  trellis: {
+    en: { title: 'Trellis — Multi-tenant Team Project-Management Platform', url: 'trellis.sarvarbek-sodiqov.uz · github.com/Sarvarbek0704/trellis',
+      desc: 'A focused Jira/Linear alternative with tested tenant isolation: Kanban, list and calendar views, real-time collaboration via Socket.io, role-based access, workspace invitations, time tracking, reporting, API keys and signed webhooks, and background jobs via BullMQ. Many teams on one deployment, each workspace isolated.',
+      stack: 'NestJS 10 · TypeORM · PostgreSQL · BullMQ · Redis · Socket.io · Next.js 14 · TypeScript · TanStack Query · TailwindCSS' },
+    uz: { title: 'Trellis — Multi-tenant jamoa loyiha-boshqaruv platformasi', url: 'trellis.sarvarbek-sodiqov.uz · github.com/Sarvarbek0704/trellis',
+      desc: "Jira/Linear uslubidagi platforma (testlangan tenant izolyatsiyasi): Kanban/ro'yxat/kalendar ko'rinishlari, real-time hamkorlik (Socket.io), RBAC, workspace taklifnomalari, vaqt hisobi, hisobotlar, API kalitlar va imzolangan webhooklar, BullMQ fon vazifalari. Bitta deploymentda ko'p jamoa, har workspace izolyatsiyada.",
+      stack: 'NestJS 10 · TypeORM · PostgreSQL · BullMQ · Redis · Socket.io · Next.js 14 · TypeScript · TanStack Query · TailwindCSS' },
+  },
   meridian: {
-    en: { title: 'Meridian — Travel Planning Platform', url: 'meridian-beta-eight.vercel.app · github.com/Sarvarbek0704/meridian',
-      desc: 'Wanderlog/TripIt-style platform: multi-day trip creation, day-by-day drag-and-drop itinerary builder, group expense splitting via a greedy minimum-transaction algorithm, travel buddy finder with AI-matched suggestions, 15-destination curated catalog, OTP email auth and a full review system.',
+    en: { title: 'Meridian — Travel Planning Platform', url: 'meridian.sarvarbek-sodiqov.uz · github.com/Sarvarbek0704/meridian',
+      desc: 'Wanderlog/TripIt-style platform: multi-day trip creation, day-by-day drag-and-drop itinerary builder, group expense splitting via a greedy minimum-transaction algorithm, travel-buddy finder with matched suggestions, a 20-destination curated catalog, OTP email auth and a full review system.',
       stack: 'NestJS 10 · TypeORM · PostgreSQL · Next.js 14 · TypeScript · RTK Query · TailwindCSS · Nodemailer · Framer Motion' },
-    uz: { title: 'Meridian — Sayohat rejalashtirish', url: 'meridian-beta-eight.vercel.app · github.com/Sarvarbek0704/meridian',
-      desc: "Wanderlog/TripIt tipidagi platforma: trip yaratish, kun-kun itinerary builder (drag-and-drop), guruh xarajatlarini avtomatik bo'lish (greedy minimum-transaction algoritmi), travel buddy finder, 15 ta destination katalog, OTP email autentifikatsiya, sharhlar tizimi.",
+    uz: { title: 'Meridian — Sayohat rejalashtirish', url: 'meridian.sarvarbek-sodiqov.uz · github.com/Sarvarbek0704/meridian',
+      desc: "Wanderlog/TripIt tipidagi platforma: trip yaratish, kun-kun itinerary builder (drag-and-drop), guruh xarajatlarini avtomatik bo'lish (greedy minimum-transaction algoritmi), travel buddy finder, 20 ta destination katalog, OTP email autentifikatsiya, sharhlar tizimi.",
       stack: 'NestJS 10 · TypeORM · PostgreSQL · Next.js 14 · TypeScript · RTK Query · TailwindCSS · Nodemailer · Framer Motion' },
   },
-  taskflow: {
-    en: { title: 'TaskFlow — Team Task Management (PWA)', url: 'taskflow-lovat-one.vercel.app · github.com/Sarvarbek0704/taskflow',
-      desc: 'Trello-style Kanban platform with drag-and-drop, multi-workspace support and polyglot persistence (PostgreSQL + MongoDB). Telegram bot notifications, deadline-checker cron jobs, Markdown comments, file attachments, CSV export, installable PWA with offline support, keyboard shortcuts and a global command palette.',
-      stack: 'Node.js · Express · Sequelize · PostgreSQL · Mongoose · MongoDB · React 18 · TypeScript · Redux Toolkit · TanStack Query · shadcn/ui · TailwindCSS' },
-    uz: { title: 'TaskFlow — Jamoa vazifa boshqaruvi (PWA)', url: 'taskflow-lovat-one.vercel.app · github.com/Sarvarbek0704/taskflow',
-      desc: "Trello tipidagi Kanban platforma: drag-and-drop board, multi-workspace, polyglot persistence (PostgreSQL + MongoDB), Telegram bot bildirishnomalar, deadline cron jobs, Markdown izohlar, fayl yuklash, CSV eksport, PWA (offline), keyboard shortcuts va global command palette.",
-      stack: 'Node.js · Express · Sequelize · PostgreSQL · Mongoose · MongoDB · React 18 · TypeScript · Redux Toolkit · TanStack Query · shadcn/ui · TailwindCSS' },
-  },
-  library: {
-    en: { title: 'Library — Library Management System', url: 'library-one-phi.vercel.app · github.com/Sarvarbek0704/library',
-      desc: 'Online library management platform with three roles (User, Admin, Super Admin): SMS OTP authentication, membership plans with payment flow, book booking and return-request workflow, waitlist system, reviews and ratings, plus cron jobs for overdue bookings and deadline alerts.',
-      stack: 'NestJS · Prisma · PostgreSQL · React 18 · TypeScript · Redux Toolkit · TanStack Query · Radix UI · TailwindCSS · Recharts' },
-    uz: { title: 'Library — Kutubxona boshqaruv tizimi', url: 'library-one-phi.vercel.app · github.com/Sarvarbek0704/library',
-      desc: "Onlayn kutubxona platforma: 3 ta rol (User, Admin, Super Admin), SMS OTP autentifikatsiya, a'zolik (Membership) tariflari va to'lov tizimi, kitob bron qilish, qaytarish so'rovlari, waitlist (navbat), sharhlar va reyting, cron jobs (muddati o'tgan bronlar, deadline ogohlantirishlar).",
-      stack: 'NestJS · Prisma · PostgreSQL · React 18 · TypeScript · Redux Toolkit · TanStack Query · Radix UI · TailwindCSS · Recharts' },
+  javon: {
+    en: { title: 'Javon — Online Library Platform', url: 'javon.sarvarbek-sodiqov.uz · github.com/Sarvarbek0704/javon',
+      desc: 'Online library platform with three roles (User, Admin, Super Admin) across many libraries: phone + password authentication, membership tiers with a payment flow, book booking and return-request workflow, a waitlist system, reviews and ratings, plus cron jobs for overdue bookings and deadline alerts.',
+      stack: 'NestJS · Prisma 7 · PostgreSQL · React 18 · TypeScript · Redux Toolkit · TanStack Query · Radix UI · TailwindCSS · Recharts' },
+    uz: { title: 'Javon — Onlayn kutubxona platformasi', url: 'javon.sarvarbek-sodiqov.uz · github.com/Sarvarbek0704/javon',
+      desc: "Onlayn kutubxona platforma (ko'p kutubxona): 3 ta rol (User, Admin, Super Admin), telefon + parol autentifikatsiya, a'zolik tariflari va to'lov tizimi, kitob bron qilish, qaytarish so'rovlari, waitlist (navbat), sharhlar va reyting, cron jobs (muddati o'tgan bronlar, deadline ogohlantirishlar).",
+      stack: 'NestJS · Prisma 7 · PostgreSQL · React 18 · TypeScript · Redux Toolkit · TanStack Query · Radix UI · TailwindCSS · Recharts' },
   },
 }
 
-const RESUME_PROJECTS = ['wisar', 'mathacademy', 'smdshop', 'nexus']
-const CV_PROJECTS = ['wisar', 'mathacademy', 'smdshop', 'nexus', 'helix', 'meridian', 'taskflow', 'library']
+const RESUME_PROJECTS = ['wisar', 'ziyo', 'ustoz', 'nexus']
+const CV_PROJECTS = ['wisar', 'ziyo', 'ustoz', 'nexus', 'helix', 'karvon', 'trellis', 'meridian']
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
@@ -249,7 +269,7 @@ function sidebar({ lang }) {
   const feCore = ['React', 'Next.js', 'TypeScript', 'Redux Toolkit', 'RTK Query', 'TanStack Query', 'Tailwind CSS', 'SCSS', 'Vite']
   const beCore = ['Node.js', 'NestJS', 'Express', 'REST API', 'GraphQL', 'WebSocket', 'JWT', 'Prisma', 'TypeORM']
   const dbCore = ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis']
-  const opsCore = ['Git', 'Docker', 'CI/CD', 'Vercel', 'Render', 'Railway', 'Figma']
+  const opsCore = ['Git', 'Docker', 'Nginx', 'Linux (VPS)', "Let's Encrypt", 'CI/CD', 'Figma']
 
   const projectHtml = keys.map((k) => {
     const p = P[k][lang]
