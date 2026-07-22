@@ -78,9 +78,16 @@ export const projects: Project[] = [
     slug: "ziyo",
     title: "Ziyo",
     images: [
-      { src: "/shots/ziyo-desktop.jpg", device: "desktop" },
+      { src: "/shots/ziyo-desktop-1.jpg", device: "desktop" },
       { src: "/shots/ziyo-desktop-2.jpg", device: "desktop" },
-      { src: "/shots/ziyo-mobile.jpg", device: "mobile" },
+      { src: "/shots/ziyo-desktop-3.jpg", device: "desktop" },
+      { src: "/shots/ziyo-desktop-4.jpg", device: "desktop" },
+      { src: "/shots/ziyo-desktop-5.jpg", device: "desktop" },
+      { src: "/shots/ziyo-mobile-1.jpg", device: "mobile" },
+      { src: "/shots/ziyo-mobile-2.jpg", device: "mobile" },
+      { src: "/shots/ziyo-mobile-3.jpg", device: "mobile" },
+      { src: "/shots/ziyo-mobile-4.jpg", device: "mobile" },
+      { src: "/shots/ziyo-mobile-5.jpg", device: "mobile" },
     ],
     selfHosted: true,
     tagline: {
@@ -124,7 +131,8 @@ export const projects: Project[] = [
     demo: {
       label: { uz: "Demo — maktab (tenant): mathacademy", en: "Demo — school (tenant): mathacademy" },
       entries: [
-        { role: "Admin (read-only)", email: "demo", password: "Demo1234!" },
+        { role: "Admin (staff login)", email: "demo", password: "Demo1234!" },
+        { role: "Parent (guardian login)", email: "mathacademy-MA-DEMO", password: "Demo1234!" },
       ],
     },
     year: "2026",
