@@ -75,6 +75,63 @@ export const projects: Project[] = [
     category: { uz: "Marketplace · Xizmatlar", en: "Marketplace · Services" },
   },
   {
+    slug: "kelvin",
+    title: "Kelvin",
+    images: [
+      { src: "/shots/kelvin-desktop.jpg", device: "desktop" },
+      { src: "/shots/kelvin-desktop-2.jpg", device: "desktop" },
+      { src: "/shots/kelvin-mobile.jpg", device: "mobile" },
+    ],
+    selfHosted: true,
+    tagline: {
+      uz: "Yoritish do'koni uchun e-commerce platforma",
+      en: "Lighting-store e-commerce platform",
+    },
+    description: {
+      uz: "Yoritish do'koni uchun boshdan-oyoq e-commerce platforma — vitrina, ombor, buyurtma, kassa (POS) va CRM. Yoritish sohasiga xos fasetli qidiruv: rang harorati (2700K–6500K), IP himoya darajasi, tsokol turi va lumen bo'yicha jonli filtr. Backend'da atomik zaxira (bir vaqtda sotib olishga qarshi), transactional outbox va buyurtma sagasi. Iliq-boutique dizaynda qayta ishlangan front.",
+      en: "End-to-end commerce platform for a lighting store — storefront, inventory, orders, point-of-sale and CRM. Domain-specific faceted search: live filtering by colour temperature (2700K–6500K), IP rating, socket type and lumens. The backend uses an atomic conditional reservation (oversell-proof), a transactional outbox and an order saga. Front rebuilt in a warm-boutique design.",
+    },
+    highlights: {
+      uz: [
+        "Fasetli qidiruv (rang harorati, IP, tsokol, lumen) — Meilisearch",
+        "Atomik zaxira: oversell'ga qarshi shartli UPDATE (poyga yo'q)",
+        "Transactional outbox + BullMQ worker (ishonchli hodisalar)",
+        "Buyurtma sagasi, yetkazish zonalari, Click/Payme to'lov oqimi",
+        "Pul BigInt tiyinda (float emas), 9 migratsiya, POS · CRM · analitika",
+      ],
+      en: [
+        "Faceted search (colour temperature, IP, socket, lumens) — Meilisearch",
+        "Atomic reservation: oversell-proof conditional UPDATE (no race)",
+        "Transactional outbox + BullMQ worker (reliable events)",
+        "Order saga, delivery zones, Click/Payme payment flow",
+        "Money as BigInt tiyin (never float), 9 migrations, POS · CRM · analytics",
+      ],
+    },
+    stack: [
+      "NestJS 11",
+      "Prisma 6",
+      "PostgreSQL",
+      "Meilisearch",
+      "Redis · BullMQ",
+      "React 19",
+      "Vite",
+      "styled-components",
+      "TanStack Query",
+      "Docker",
+    ],
+    live: "https://kelvin.sarvarbek-sodiqov.uz",
+    github: "https://github.com/Sarvarbek0704/kelvin",
+    demo: {
+      label: { uz: "Demo hisoblar", en: "Demo credentials" },
+      entries: [
+        { role: "Customer", email: "customer@kelvin.uz", password: "kelvin-dev-password" },
+        { role: "Admin", email: "admin@kelvin.uz", password: "kelvin-dev-password" },
+      ],
+    },
+    year: "2026",
+    category: { uz: "E-commerce · Retail", en: "E-commerce · Retail" },
+  },
+  {
     slug: "ziyo",
     title: "Ziyo",
     images: [
