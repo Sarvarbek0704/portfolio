@@ -132,6 +132,56 @@ export const projects: Project[] = [
     category: { uz: "E-commerce · Retail", en: "E-commerce · Retail" },
   },
   {
+    slug: "birga",
+    title: "Birga",
+    images: [
+      { src: "/shots/birga-desktop.jpg", device: "desktop" },
+      { src: "/shots/birga-desktop-2.jpg", device: "desktop" },
+      { src: "/shots/birga-mobile.jpg", device: "mobile" },
+    ],
+    selfHosted: true,
+    tagline: {
+      uz: "Real-time hamkorlikда matn muharriri",
+      en: "Real-time collaborative editor",
+    },
+    description: {
+      uz: "Bir hujjatда bir necha kishi bir vaqtда yozadigan real-time muharrir — jonli kursorlar, presence va offline'да ham konfliktсиз birlashadigan tahrirlar. Yadroда noldan yozilган sequence CRDT (`@birga/crdt`) va Rich rejim uchun Yjs. WebSocket sync server + Postgres op-log persistence. Rollar: owner/editor/viewer — viewer jonli read-only.",
+      en: "A real-time editor where several people write in the same document at once — live cursors, presence, and edits that merge without conflicts even offline. Core is a from-scratch sequence CRDT (`@birga/crdt`) plus Yjs for Rich mode. WebSocket sync server + Postgres op-log persistence. Roles: owner/editor/viewer — viewers are live read-only.",
+    },
+    highlights: {
+      uz: [
+        "Noldan yozilган sequence CRDT (`@birga/crdt`) + Yjs Rich rejim",
+        "Jonli kursorlar, presence, name-flag (real-time awareness)",
+        "Offline-first: uzilса lokal saqlaydi, ulanганда konfliktсиз birlashadi",
+        "Rol-asosli ruxsat — viewer jonli read-only (WS enforcement)",
+        "WebSocket sync server + Postgres op-log + kompaktsiya",
+      ],
+      en: [
+        "From-scratch sequence CRDT (`@birga/crdt`) + Yjs for Rich mode",
+        "Live cursors, presence, name flags (real-time awareness)",
+        "Offline-first: saves locally on drop, merges conflict-free on reconnect",
+        "Role-based access — viewers are live read-only (WS enforcement)",
+        "WebSocket sync server + Postgres op-log + compaction",
+      ],
+    },
+    stack: [
+      "Next.js 14",
+      "TypeScript",
+      "TipTap",
+      "Yjs + custom CRDT",
+      "WebSocket (ws)",
+      "Node.js",
+      "PostgreSQL",
+      "TailwindCSS",
+      "pnpm monorepo",
+    ],
+    live: "https://birga.sarvarbek-sodiqov.uz",
+    github: "https://github.com/Sarvarbek0704/birga",
+    badge: { uz: "Bir bosishда demo — Ada · Ben · Carol", en: "One-click demo — Ada · Ben · Carol" },
+    year: "2026",
+    category: { uz: "Real-time · Hamkorlik", en: "Real-time · Collaboration" },
+  },
+  {
     slug: "ziyo",
     title: "Ziyo",
     images: [
