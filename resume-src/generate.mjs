@@ -174,10 +174,34 @@ const P = {
       desc: "Onlayn kutubxona platforma (ko'p kutubxona): 3 ta rol (User, Admin, Super Admin), telefon + parol autentifikatsiya, a'zolik tariflari va to'lov tizimi, kitob bron qilish, qaytarish so'rovlari, waitlist (navbat), sharhlar va reyting, cron jobs (muddati o'tgan bronlar, deadline ogohlantirishlar).",
       stack: 'NestJS · Prisma 7 · PostgreSQL · React 18 · TypeScript · Redux Toolkit · TanStack Query · Radix UI · TailwindCSS · Recharts' },
   },
+  zehn: {
+    en: { title: 'Zehn — Retrieval-Grounded (RAG) Assistant over Uzbek Corpora', url: 'zehn.sarvarbek-sodiqov.uz · github.com/Sarvarbek0704/zehn',
+      desc: 'A RAG system over Uzbek document corpora: structure-aware chunking, Uzbek-morphology-aware hybrid retrieval (vector + full-text, RRF fusion) on pgvector, grounded answers with inline citations and a "not found" refusal path. Includes an evaluation harness that measures recall@k, MRR and faithfulness, plus pluggable embedding/LLM providers. Multi-tenant by organisation.',
+      stack: 'NestJS · Next.js 14 · PostgreSQL + pgvector · RAG · Hybrid retrieval (RRF) · SSE streaming · BullMQ + Redis · TypeScript' },
+    uz: { title: 'Zehn — O‘zbekcha korpus ustidan iqtibosli RAG-assistant', url: 'zehn.sarvarbek-sodiqov.uz · github.com/Sarvarbek0704/zehn',
+      desc: "O'zbek hujjat korpusi ustidan RAG tizimi: struktura-aware chunking, o'zbek morfologiyasiga moslashgan hybrid qidiruv (vektor + full-text, RRF) pgvector ustida, iqtibosli grounded javob va \"ma'lumot topilmadi\" rad etish yo'li. Retrieval va javob sifatini o'lchaydigan eval harness (recall@k, MRR, faithfulness); pluggable embedding/LLM. Org bo'yicha multi-tenant.",
+      stack: 'NestJS · Next.js 14 · PostgreSQL + pgvector · RAG · Hybrid retrieval (RRF) · SSE streaming · BullMQ + Redis · TypeScript' },
+  },
+  manzara: {
+    en: { title: 'Manzara — Property-Market Intelligence (Data Engineering)', url: 'manzara.sarvarbek-sodiqov.uz · github.com/Sarvarbek0704/manzara',
+      desc: "A data pipeline for Uzbekistan's property market: scraping, dirty-data normalisation (three currencies, messy areas, district spellings), and entity resolution that merges the same flat listed across sites into one record — measured at 98.5% precision / 92.9% recall. Analytics: median/percentile price by district × rooms, weekly trends, and a valuation that flags over/under-priced listings.",
+      stack: 'NestJS · Next.js · PostgreSQL + pg_trgm · Playwright · Entity resolution · BullMQ + Redis · Recharts · TypeScript' },
+    uz: { title: 'Manzara — Ko‘chmas mulk bozor analitikasi (Data Engineering)', url: 'manzara.sarvarbek-sodiqov.uz · github.com/Sarvarbek0704/manzara',
+      desc: "O'zbekiston ko'chmas mulk bozori uchun data pipeline: scraping, iflos ma'lumot normalizatsiyasi (uch valyuta, tartibsiz maydon, tuman nomlari), va bir kvartirani turli saytdagi takroridan bitta yozuvga birlashtiruvchi entity resolution — 98.5% precision / 92.9% recall bilan o'lchangan. Analitika: tuman × xona median narx, haftalik trend, e'lonni bozor medianidan % yuqori/past baholovchi valuation.",
+      stack: 'NestJS · Next.js · PostgreSQL + pg_trgm · Playwright · Entity resolution · BullMQ + Redis · Recharts · TypeScript' },
+  },
+  multilevel: {
+    en: { title: 'Multilevel — CEFR Exam-Prep Platform with AI Grading', url: 'multilevel.wisar.uz · github.com/Sarvarbek0704/multilevel-wisar',
+      desc: 'A CEFR/UzBMB exam-prep platform: courses, full mock exams, spaced-repetition vocabulary, and AI grading for Writing/Speaking that returns a CEFR level, band scores and detailed feedback. Email-OTP auth, Telegram bot integration (webhook) and a provider-swappable AI layer.',
+      stack: 'NestJS · Next.js · PostgreSQL + Prisma · Gemini AI (grading) · Telegram Bot API · JWT + email OTP · TypeScript' },
+    uz: { title: 'Multilevel — AI baholashli CEFR imtihon platformasi', url: 'multilevel.wisar.uz · github.com/Sarvarbek0704/multilevel-wisar',
+      desc: "CEFR/UzBMB imtihoniga tayyorlash platformasi: kurslar, to'liq mock imtihonlar, spaced-repetition so'z yodlash, va Writing/Speaking uchun AI baholash — CEFR daraja, band ball va batafsil izoh qaytaradi. Email-OTP autentifikatsiya, Telegram bot (webhook), provayder-almashinadigan AI qatlami.",
+      stack: 'NestJS · Next.js · PostgreSQL + Prisma · Gemini AI (grading) · Telegram Bot API · JWT + email OTP · TypeScript' },
+  },
 }
 
-const RESUME_PROJECTS = ['wisar', 'ziyo', 'ustoz', 'nexus']
-const CV_PROJECTS = ['wisar', 'ziyo', 'ustoz', 'nexus', 'helix', 'karvon', 'trellis', 'meridian']
+const RESUME_PROJECTS = ['zehn', 'ustoz', 'ziyo', 'nexus']
+const CV_PROJECTS = ['zehn', 'manzara', 'multilevel', 'ustoz', 'ziyo', 'nexus', 'wisar', 'helix', 'karvon', 'trellis', 'meridian']
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 

@@ -383,7 +383,7 @@ function Work({ lang, onOpenProject }: { lang: Lang; onOpenProject: (slug: strin
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeader eyebrow={t.work.eyebrow[lang]} title={t.work.title[lang]} subtitle={t.work.subtitle[lang]} />
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((p, i) => (
             <motion.button
               key={p.slug}
