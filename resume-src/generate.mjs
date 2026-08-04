@@ -21,7 +21,7 @@ const L = {
   en: {
     loc: 'Tashkent, Uzbekistan',
     summary:
-      "Full-Stack Web Developer, currently a frontend developer at ManaJoy building a nationwide marketplace and its admin panel with React, Next.js and TypeScript. Beyond my job I've shipped nine production-grade full-stack applications end-to-end — and I don't just write them, I deploy and operate them: each runs on my own VPS with Docker, Nginx, PostgreSQL and automated HTTPS. One, a live-teaching platform, has a paying client. I'm fluent in multi-tenant schemas, RBAC, JWT, real-time features, escrow flows and OAuth, and I care about clean architecture, security and actually shipping.",
+      "Full-Stack Web Developer, currently a frontend developer at ManaJoy — a nationwide marketplace and its admin panel, built with React, Next.js and TypeScript. Nine production-grade full-stack applications outside work, each self-hosted on a VPS with Docker, Nginx, PostgreSQL and automated HTTPS; one live-teaching platform has a paying client. Areas of work: multi-tenant schemas, RBAC, JWT, real-time features, escrow flows, OAuth, clean architecture and security.",
     skillsLabel: 'TECHNICAL SKILLS',
     workLabel: 'WORK EXPERIENCE',
     projectsLabel: 'FEATURED PROJECTS',
@@ -42,13 +42,13 @@ const L = {
       {
         role: 'ManaJoy — Frontend Developer',
         period: 'May 2026 — Present',
-        desc: 'Building the customer-facing marketplace and internal admin panel for a nationwide platform (discounts, stores, services, loyalty). Product and store catalogs, "nearby stores" maps and geolocation via MapLibre GL, order tracking, loyalty/points and reservation flows. Working within a team led by a project manager.',
+        desc: 'Customer-facing marketplace and internal admin panel for a nationwide platform (discounts, stores, services, loyalty). Product and store catalogs, "nearby stores" maps and geolocation via MapLibre GL, order tracking, loyalty/points and reservation flows. Team environment led by a project manager.',
         stack: 'React · Next.js · TypeScript · TailwindCSS · shadcn/ui · MapLibre GL · TanStack Query · React Hook Form · Zod',
       },
       {
         role: 'Najot Ta’lim — Full-Stack Developer',
         period: 'Oct 2025 — Mar 2026',
-        desc: 'Full-stack web development for six months at the academy where I trained: built and maintained features across the frontend and backend with React, Node.js/NestJS and PostgreSQL, working from requirements to shipped, reviewed code.',
+        desc: 'Six months of full-stack web development at the training academy: features across frontend and backend with React, Node.js/NestJS and PostgreSQL, from requirements to shipped, reviewed code.',
         stack: 'React · Node.js · NestJS · TypeScript · PostgreSQL',
       },
     ],
@@ -61,7 +61,7 @@ const L = {
   uz: {
     loc: "Toshkent, O'zbekiston",
     summary:
-      "Full-Stack Web Developer. Hozir ManaJoy'da frontend dasturchi — O'zbekiston bo'ylab ishlaydigan marketplace va uning admin panelini React, Next.js va TypeScript'da rivojlantiraman. Ishdan tashqari 9 ta production darajadagi to'liq stack ilovani boshidan oxirigacha qurdim — va ularni faqat yozmayman, o'zim deploy qilib ishlataman: har biri o'z VPS serverimda Docker, Nginx, PostgreSQL va avtomatik HTTPS bilan ishlaydi. Bittasi — jonli dars platformasi — to'lovchi mijozga ega. Multi-tenant sxemalar, RBAC, JWT, real-time, escrow va OAuth bilan erkin ishlayman; toza arxitektura, xavfsizlik va mahsulotni yetkazishga jiddiy qarayman.",
+      "Full-Stack Web Developer. Hozirda ManaJoy'da frontend dasturchi — O'zbekiston bo'ylab ishlaydigan marketplace va uning admin paneli React, Next.js va TypeScript'da. Ish tashqarisida 9 ta production darajadagi to'liq stack ilova, har biri VPS serverda Docker, Nginx, PostgreSQL va avtomatik HTTPS bilan joylashtirilgan; bittasi — jonli dars platformasi — to'lovchi mijozga ega. Yo'nalishlar: multi-tenant sxemalar, RBAC, JWT, real-time, escrow, OAuth, toza arxitektura va xavfsizlik.",
     skillsLabel: "TEXNIK KO'NIKMALAR",
     workLabel: 'ISH TAJRIBASI',
     projectsLabel: 'ASOSIY LOYIHALAR',
@@ -82,13 +82,13 @@ const L = {
       {
         role: 'ManaJoy — Frontend dasturchi',
         period: '2026-may — hozir',
-        desc: "O'zbekiston bo'ylab ishlaydigan marketplace (chegirmalar, do'konlar, xizmatlar, loyalty) mijozlar sayti va ichki admin panelini rivojlantiraman. Mahsulot va do'kon kataloglari, MapLibre GL bilan \"yaqin do'konlar\" xaritasi va geolokatsiya, buyurtma kuzatuvi, loyalty va bron oqimlari. Project manager rahbarligida jamoada ishlayman.",
+        desc: "O'zbekiston bo'ylab ishlaydigan marketplace (chegirmalar, do'konlar, xizmatlar, loyalty) mijozlar sayti va ichki admin paneli. Mahsulot va do'kon kataloglari, MapLibre GL bilan \"yaqin do'konlar\" xaritasi va geolokatsiya, buyurtma kuzatuvi, loyalty va bron oqimlari. Project manager rahbarligida, jamoada.",
         stack: 'React · Next.js · TypeScript · TailwindCSS · shadcn/ui · MapLibre GL · TanStack Query · React Hook Form · Zod',
       },
       {
         role: 'Najot Ta’lim — Full-Stack dasturchi',
         period: '2025-okt — 2026-mart',
-        desc: "O'zim o'qigan akademiyada 6 oy full-stack dasturchi: React, Node.js/NestJS va PostgreSQL bilan frontend va backend funksiyalarini qurdim va rivojlantirdim — talabdan tortib yetkazilgan, review qilingan kodgacha.",
+        desc: "O'qilgan akademiyada 6 oy full-stack dasturlash: React, Node.js/NestJS va PostgreSQL bilan frontend va backend funksiyalari — talabdan tortib yetkazilgan, review qilingan kodgacha.",
         stack: 'React · Node.js · NestJS · TypeScript · PostgreSQL',
       },
     ],
@@ -100,14 +100,14 @@ const L = {
   },
 }
 
-/* project catalog (en + uz) — all live and self-hosted on my own VPS */
+/* project catalog (en + uz) — all live and self-hosted on a VPS */
 const P = {
   wisar: {
     en: { title: 'Wisar — Programming & English Learning Platform', url: 'wisar.uz',
-      desc: 'A free Uzbek-language EdTech platform I built and shipped end-to-end: a zero-to-senior+ programming course with 706+ articles across 41+ sections, interactive coding exercises and quizzes, SM-2 spaced-repetition flashcards, an IELTS coach with mock tests, a daily planner, streaks and a progress dashboard with certificates.',
+      desc: 'A free Uzbek-language EdTech platform: a zero-to-senior+ programming course with 706+ articles across 41+ sections, interactive coding exercises and quizzes, SM-2 spaced-repetition flashcards, an IELTS coach with mock tests, a daily planner, streaks and a progress dashboard with certificates.',
       stack: 'Next.js · React · TypeScript · TailwindCSS · Redux Toolkit · TanStack Query · Framer Motion' },
     uz: { title: "Wisar — Dasturlash va ingliz tili platformasi", url: 'wisar.uz',
-      desc: "O'zbek tilidagi bepul ta'lim platformasi, boshidan oxirigacha o'zim qurdim: noldan senior+ gacha dasturlash kursi (706+ maqola, 41+ bo'lim), interaktiv mashqlar va quizlar, SM-2 spaced repetition flashcardlari, IELTS coach (mock testlar), kunlik planner, streak va sertifikatli progress dashboard.",
+      desc: "O'zbek tilidagi bepul ta'lim platformasi: noldan senior+ gacha dasturlash kursi (706+ maqola, 41+ bo'lim), interaktiv mashqlar va quizlar, SM-2 spaced repetition flashcardlari, IELTS coach (mock testlar), kunlik planner, streak va sertifikatli progress dashboard.",
       stack: 'Next.js · React · TypeScript · TailwindCSS · Redux Toolkit · TanStack Query · Framer Motion' },
   },
   ziyo: {

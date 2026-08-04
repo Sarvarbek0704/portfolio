@@ -40,8 +40,8 @@ export const projects: Project[] = [
     },
     badge: { uz: "Ish joyi · Jamoa", en: "At work · Team" },
     description: {
-      uz: "O'zbekiston bo'ylab ishlaydigan real onlayn marketplace. Mahsulotlar, yaqin do'konlar va xizmatlar (gaming zonalar, salonlar, sartaroshxonalar, sport, restoranlar — stol bron qilish bilan), loyalty kartalari va ball tizimi, sotuvchi bo'lish oqimi. Men 2026-maydan beri jamoada frontend dasturchi sifatida mijozlar sayti va ichki admin panelini rivojlantiraman.",
-      en: "A real, in-production online marketplace serving all of Uzbekistan — products, nearby stores and services (gaming venues, salons, barbershops, sports, restaurants with table reservations), loyalty cards and a points system, and seller onboarding. Since May 2026 I've been building the customer-facing site and the internal admin panel as a frontend developer on the team.",
+      uz: "O'zbekiston bo'ylab ishlaydigan real onlayn marketplace. Mahsulotlar, yaqin do'konlar va xizmatlar (gaming zonalar, salonlar, sartaroshxonalar, sport, restoranlar — stol bron qilish bilan), loyalty kartalari va ball tizimi, sotuvchi bo'lish oqimi. Mijozlar sayti va ichki admin paneli ish joyida, jamoada, frontend yo'nalishida ishlab chiqiladi.",
+      en: "A real, in-production online marketplace serving all of Uzbekistan — products, nearby stores and services (gaming venues, salons, barbershops, sports, restaurants with table reservations), loyalty cards and a points system, and seller onboarding. The customer-facing site and internal admin panel are developed with a team at work, in a frontend role.",
     },
     highlights: {
       uz: [
@@ -480,8 +480,8 @@ export const projects: Project[] = [
     badge: { uz: "Jonli mahsulot · Mijozli", en: "Live product · Has a client" },
     selfHosted: true,
     description: {
-      uz: "Real ustozlar uchun ishlab chiqilgan, sotiladigan mahsulot — to'lovchi mijozi ham bor. Ustoz guruhga jonli (real-time) dars o'tadi, dars video sifatida saqlanadi va o'quvchilar uni ro'yxatdan o'tgan holda qayta ko'radi. Avtomatik baholanadigan testlar, ustoz baholaydigan uy ishlari, davomat va ko'rish (watch-tracking) nazorati — bu darsni to'liq kursga aylantiradi. Interfeys o'zbek, rus va ingliz tillarida. Men boshidan oxirigacha o'zim qurdim va o'z serverimda ishga tushirdim.",
-      en: "A real, sellable product built for real teachers — it already has a paying client. A teacher runs a live (real-time) class over WebRTC, the session is recorded to durable storage, and enrolled students rewatch it — with auto-graded quizzes, teacher-graded assignments, attendance and watch-tracking that turn a lesson into a full course. Interface in Uzbek, Russian and English. I built it end-to-end and run it on my own server.",
+      uz: "Real ustozlar uchun ishlab chiqilgan, sotiladigan mahsulot — to'lovchi mijozi ham bor. Ustoz guruhga jonli (real-time) dars o'tadi, dars video sifatida saqlanadi va o'quvchilar uni ro'yxatdan o'tgan holda qayta ko'radi. Avtomatik baholanadigan testlar, ustoz baholaydigan uy ishlari, davomat va ko'rish (watch-tracking) nazorati — bu darsni to'liq kursga aylantiradi. Interfeys o'zbek, rus va ingliz tillarida. Mustaqil qurilgan va o'z serverida joylashtirilgan.",
+      en: "A real, sellable product built for real teachers — it already has a paying client. A teacher runs a live (real-time) class over WebRTC, the session is recorded to durable storage, and enrolled students rewatch it — with auto-graded quizzes, teacher-graded assignments, attendance and watch-tracking that turn a lesson into a full course. Interface in Uzbek, Russian and English. Built independently and self-hosted.",
     },
     highlights: {
       uz: [
@@ -596,8 +596,8 @@ export const projects: Project[] = [
     badge: { uz: "Jonli mahsulot · Yakka", en: "Live product · Solo" },
     selfHosted: true,
     description: {
-      uz: "O'zbek tilidagi bepul ta'lim platformasi — noldan senior+ gacha to'liq full-stack dasturlash kursi, 706+ maqola va 41+ bo'lim, ingliz tili va IELTS moduli. Interaktiv mashqlar, SM-2 spaced repetition flashcardlari, kunlik planner va streak tizimi bilan bilimni amaliyotga bog'laydi. Ushbu platformani boshidan oxirigacha o'zim ishlab chiqdim va o'z serverimda, o'z domenimda ishga tushirdim.",
-      en: "A free Uzbek-language learning platform — a full-stack programming course from zero to senior+, 706+ articles across 41+ sections, plus English and IELTS modules. It ties theory to practice with interactive exercises, SM-2 spaced-repetition flashcards, a daily planner and a streak system. I built this platform end-to-end on my own and run it on my own server, on my own domain.",
+      uz: "O'zbek tilidagi bepul ta'lim platformasi — noldan senior+ gacha to'liq full-stack dasturlash kursi, 706+ maqola va 41+ bo'lim, ingliz tili va IELTS moduli. Interaktiv mashqlar, SM-2 spaced repetition flashcardlari, kunlik planner va streak tizimi bilan bilimni amaliyotga bog'laydi. Mustaqil qurilgan, o'z serverida va o'z domenida joylashtirilgan.",
+      en: "A free Uzbek-language learning platform — a full-stack programming course from zero to senior+, 706+ articles across 41+ sections, plus English and IELTS modules. It ties theory to practice with interactive exercises, SM-2 spaced-repetition flashcards, a daily planner and a streak system. Built independently, self-hosted on its own domain.",
     },
     highlights: {
       uz: [
@@ -911,8 +911,8 @@ export const t = {
     role: { uz: "Full-Stack Web Developer", en: "Full-Stack Web Developer" },
     based: { uz: "Toshkent, Oʻzbekiston", en: "Tashkent, Uzbekistan" },
     intro: {
-      uz: "Toshkentda yashovchi Full-Stack Web Developerman. Hozir ManaJoy'da frontend dasturchi sifatida ishlayapman. Bundan tashqari 10 ta to'liq stack loyihamning hammasi jonli — o'z VPS serverimda, o'z domenimda, Docker, Nginx va PostgreSQL bilan o'zim deploy qilib, HTTPS bilan ishlab turibman. Faqat kod yozmayman — deploy qilaman va ishlatib turaman.",
-      en: "Full-Stack Web Developer based in Tashkent. I currently work as a frontend developer at ManaJoy. Beyond that, all 10 of my full-stack projects are live — self-hosted on my own VPS, on my own domain, deployed by me with Docker, Nginx and PostgreSQL, running over HTTPS. I don't just write code — I ship and operate it.",
+      uz: "Toshkentda yashovchi Full-Stack Web Developer. Hozirda ManaJoy'da frontend dasturchi. Ish tashqarisida — jonli ishlaydigan 10 ta to'liq stack loyiha, barchasi VPS serverda, o'z domenida, Docker, Nginx va PostgreSQL bilan, HTTPS orqali.",
+      en: "Full-Stack Web Developer based in Tashkent. Currently a frontend developer at ManaJoy. Outside work — ten full-stack projects, all live and self-hosted on a VPS with Docker, Nginx and PostgreSQL over HTTPS.",
     },
     cta1: { uz: "Loyihalarimni ko'ring", en: "View my work" },
     cta2: { uz: "Bog'lanish", en: "Get in touch" },
@@ -922,8 +922,8 @@ export const t = {
     eyebrow: { uz: "01 — Loyihalar", en: "01 — Selected Work" },
     title: { uz: "Mening loyihalarim", en: "Featured projects" },
     subtitle: {
-      uz: "O'nta to'liq stack loyiha — hammasi jonli ishlaydi. ManaJoy'ni ish joyimda jamoada quramiz; qolganlarini boshidan oxirigacha yakka o'zim qurib, o'z VPS serverimда (Docker, Nginx, PostgreSQL, HTTPS) deploy qildim. Demo hisoblar bilan hoziroq sinab ko'ring.",
-      en: "Ten full-stack projects — all live. ManaJoy I build with a team at work; the rest I built end-to-end on my own and deployed to my own VPS (Docker, Nginx, PostgreSQL, HTTPS). Try them right now with the demo credentials.",
+      uz: "O'nta to'liq stack loyiha — hammasi jonli. ManaJoy ish joyida jamoada ishlab chiqiladi; qolganlari mustaqil loyihalar bo'lib, VPS serverda (Docker, Nginx, PostgreSQL, HTTPS) joylashtirilgan. Demo hisoblar bilan sinab ko'rish mumkin.",
+      en: "Ten full-stack projects, all live. ManaJoy is built with a team at work; the rest are independent projects, self-hosted on a VPS (Docker, Nginx, PostgreSQL, HTTPS). Try them with the demo credentials.",
     },
     viewLive: { uz: "Saytni ochish", en: "Open live site" },
     viewCode: { uz: "Kodni ko'rish", en: "Source code" },
@@ -937,16 +937,16 @@ export const t = {
     eyebrow: { uz: "02 — Men haqimda", en: "02 — About" },
     title: { uz: "Qisqacha biografiya", en: "A brief bio" },
     p1: {
-      uz: "Men 19 yoshli Full-Stack Web Developerman, Toshkentda yashayman. Najot Ta'limda 8 oylik intensiv Full-Stack bootcamp kursini tugatdim va Toshkent Davlat Iqtisodiyot Universitetining Axborot xavfsizligi yo'nalishi 3-kursida sirtqi ta'lim shaklida o'qiyman.",
-      en: "I'm a 19-year-old Full-Stack Web Developer based in Tashkent. I completed an 8-month intensive Full-Stack bootcamp at Najot Ta'lim and study Information Security as a part-time 3rd-year student at Tashkent State University of Economics.",
+      uz: "Toshkentda yashovchi 19 yoshli Full-Stack Web Developer. Najot Ta'limda 8 oylik intensiv Full-Stack bootcamp yakunlangan; hozirda Toshkent Davlat Iqtisodiyot Universitetining Axborot xavfsizligi yo'nalishi 3-kurs sirtqi talabasi.",
+      en: "A 19-year-old Full-Stack Web Developer based in Tashkent. Completed an 8-month intensive Full-Stack bootcamp at Najot Ta'lim; currently a part-time 3rd-year Information Security student at Tashkent State University of Economics.",
     },
     p2: {
-      uz: "2026-yilning may oyidan beri ManaJoy'da frontend dasturchi sifatida ishlayapman — O'zbekiston bo'ylab ishlaydigan real marketplace va uning admin panelini jamoada, project manager rahbarligida rivojlantiraman. Bu menga real mahsulot, kod-review va jamoada ishlash tajribasini beryapti.",
-      en: "Since May 2026 I've been working as a frontend developer at ManaJoy — building a real, nationwide marketplace and its admin panel with a team, led by a project manager. It's giving me hands-on experience with a real product, code review and teamwork.",
+      uz: "2026-yil may oyidan ManaJoy'da frontend dasturchi — O'zbekiston bo'ylab ishlaydigan marketplace va uning admin paneli ustida, jamoada va project manager rahbarligida. Real mahsulot, kod-review va jamoada ishlash muhiti.",
+      en: "Frontend developer at ManaJoy since May 2026 — a nationwide marketplace and its admin panel, within a team led by a project manager. A real product, with code review and teamwork.",
     },
     p3: {
-      uz: "Ishdan tashqari 10 ta to'liq stack loyihamning hammasi jonli — tibbiyot, e-commerce, ta'lim, jonli dars, freelance marketplace, sayohat, jamoa boshqaruvi va kutubxona sohalarida. Har birida multi-tenant DB, RBAC, JWT, real-time va to'lov oqimlarini o'zim ishlab chiqdim. Muhimi — men ularni faqat yozmadim, balki o'z VPS serverimga Docker, Nginx va PostgreSQL bilan o'zim deploy qildim va HTTPS bilan ishlatib turibman. Ustoz — to'lovchi mijozi bor real mahsulot. Hozir kuchli jamoalar bilan katta masshtabli ishlarga ochiqman.",
-      en: "Outside of work all 10 of my full-stack projects are live — across healthcare, e-commerce, education, live teaching, freelance marketplaces, travel, team collaboration and library management — each covering multi-tenant DB schemas, RBAC, JWT, real-time features and payment flows. What matters: I didn't just write them, I deployed them myself to my own VPS with Docker, Nginx and PostgreSQL, running over HTTPS. Ustoz is a real product with a paying client. I'm open to larger-scale work with strong teams.",
+      uz: "Ish tashqarisida 10 ta to'liq stack loyiha jonli — tibbiyot, e-commerce, ta'lim, jonli dars, freelance marketplace, sayohat, jamoa boshqaruvi va kutubxona sohalarida. Har biri multi-tenant DB, RBAC, JWT, real-time va to'lov oqimlarini o'z ichiga oladi; barchasi VPS serverda Docker, Nginx va PostgreSQL bilan, HTTPS orqali joylashtirilgan. Ustoz — to'lovchi mijozi bor mahsulot.",
+      en: "Ten full-stack projects live outside work — healthcare, e-commerce, education, live teaching, freelance marketplaces, travel, team collaboration and library management. Each covers multi-tenant DB schemas, RBAC, JWT, real-time features and payment flows; all self-hosted on a VPS with Docker, Nginx and PostgreSQL over HTTPS. Ustoz is a product with a paying client.",
     },
     facts: {
       uz: [
@@ -992,7 +992,7 @@ export const t = {
           place: "ManaJoy",
           role: "Frontend dasturchi",
           period: "2026-may — hozir",
-          note: "O'zbekiston bo'ylab ishlaydigan onlayn marketplace (chegirmalar, do'konlar, xizmatlar, loyalty). Mijozlar sayti va ichki admin panelini React, Next.js va TypeScript'da rivojlantiraman — mahsulot va do'kon kataloglari, MapLibre bilan xarita, buyurtma va loyalty oqimlari. Project manager rahbarligida jamoada ishlayman.",
+          note: "O'zbekiston bo'ylab ishlaydigan onlayn marketplace (chegirmalar, do'konlar, xizmatlar, loyalty). Mijozlar sayti va ichki admin paneli React, Next.js va TypeScript'da — mahsulot va do'kon kataloglari, MapLibre bilan xarita, buyurtma va loyalty oqimlari. Project manager rahbarligida, jamoada.",
         },
       ],
       en: [
@@ -1000,7 +1000,7 @@ export const t = {
           place: "ManaJoy",
           role: "Frontend Developer",
           period: "May 2026 — Present",
-          note: "Nationwide online marketplace (discounts, stores, services, loyalty). I build the customer-facing site and the internal admin panel with React, Next.js and TypeScript — product and store catalogs, MapLibre maps, order and loyalty flows. Working within a team led by a project manager.",
+          note: "Nationwide online marketplace (discounts, stores, services, loyalty). Customer-facing site and internal admin panel with React, Next.js and TypeScript — product and store catalogs, MapLibre maps, order and loyalty flows. Team environment led by a project manager.",
         },
       ],
     },
