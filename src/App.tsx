@@ -561,11 +561,11 @@ function Experience({ lang }: { lang: Lang }) {
 
 function Contact({ lang }: { lang: Lang }) {
   const items = [
-    { label: t.contact.email[lang], value: 'coolsarvar2007@gmail.com', href: 'mailto:coolsarvar2007@gmail.com', icon: Mail },
+    { label: t.contact.email[lang], value: 'sarvarbek.sodiqov.dev@gmail.com', href: 'mailto:sarvarbek.sodiqov.dev@gmail.com', icon: Mail },
     { label: t.contact.telegram[lang], value: '@SarvarbekSodiqov', href: 'https://t.me/SarvarbekSodiqov', icon: Send },
     { label: t.contact.phone[lang], value: '+998 90 087 77 80', href: 'tel:+998900877780', icon: Phone },
     { label: t.contact.github[lang], value: 'Sarvarbek0704', href: 'https://github.com/Sarvarbek0704', icon: Github },
-    { label: t.contact.linkedin[lang], value: 'sarvarbek-sodiqov', href: 'https://www.linkedin.com/in/sarvarbek-sodiqov-a085a23b7/', icon: Linkedin },
+    { label: t.contact.linkedin[lang], value: 'sarvarbek-sodiqov', href: 'https://www.linkedin.com/in/sarvarbek-sodiqov/', icon: Linkedin },
   ]
   return (
     <section id="contact" className="border-t border-ink-200 py-20 sm:py-28 dark:border-ink-800">

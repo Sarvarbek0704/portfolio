@@ -911,8 +911,8 @@ export const t = {
     role: { uz: "Full-Stack Web Developer", en: "Full-Stack Web Developer" },
     based: { uz: "Toshkent, Oʻzbekiston", en: "Tashkent, Uzbekistan" },
     intro: {
-      uz: "Toshkentda yashovchi Full-Stack Web Developer. Hozirda ManaJoy'da frontend dasturchi. Ish tashqarisida — jonli ishlaydigan 10 ta to'liq stack loyiha, barchasi VPS serverda, o'z domenida, Docker, Nginx va PostgreSQL bilan, HTTPS orqali.",
-      en: "Full-Stack Web Developer based in Tashkent. Currently a frontend developer at ManaJoy. Outside work — ten full-stack projects, all live and self-hosted on a VPS with Docker, Nginx and PostgreSQL over HTTPS.",
+      uz: "Toshkentda yashovchi Full-Stack Web Developer. Hozirda ManaJoy'da frontend dasturchi. Ish tashqarisida — jonli ishlaydigan 14 ta to'liq stack loyiha, barchasi VPS serverda, o'z domenida, Docker, Nginx va PostgreSQL bilan, HTTPS orqali.",
+      en: "Full-Stack Web Developer based in Tashkent. Currently a frontend developer at ManaJoy. Outside work — fourteen full-stack projects, all live and self-hosted on a VPS with Docker, Nginx and PostgreSQL over HTTPS.",
     },
     cta1: { uz: "Loyihalarimni ko'ring", en: "View my work" },
     cta2: { uz: "Bog'lanish", en: "Get in touch" },
@@ -922,8 +922,8 @@ export const t = {
     eyebrow: { uz: "01 — Loyihalar", en: "01 — Selected Work" },
     title: { uz: "Mening loyihalarim", en: "Featured projects" },
     subtitle: {
-      uz: "O'nta to'liq stack loyiha — hammasi jonli. ManaJoy ish joyida jamoada ishlab chiqiladi; qolganlari mustaqil loyihalar bo'lib, VPS serverda (Docker, Nginx, PostgreSQL, HTTPS) joylashtirilgan. Demo hisoblar bilan sinab ko'rish mumkin.",
-      en: "Ten full-stack projects, all live. ManaJoy is built with a team at work; the rest are independent projects, self-hosted on a VPS (Docker, Nginx, PostgreSQL, HTTPS). Try them with the demo credentials.",
+      uz: "14 ta mustaqil to'liq stack loyiha — hammasi jonli va VPS serverda (Docker, Nginx, PostgreSQL, HTTPS) joylashtirilgan — hamda ManaJoy ish joyida, jamoada. Demo hisoblar bilan sinab ko'rish mumkin.",
+      en: "Fourteen independent full-stack projects — all live and self-hosted on a VPS (Docker, Nginx, PostgreSQL, HTTPS) — plus ManaJoy, built with a team at work. Try them with the demo credentials.",
     },
     viewLive: { uz: "Saytni ochish", en: "Open live site" },
     viewCode: { uz: "Kodni ko'rish", en: "Source code" },
@@ -945,14 +945,14 @@ export const t = {
       en: "Frontend developer at ManaJoy since May 2026 — a nationwide marketplace and its admin panel, within a team led by a project manager. A real product, with code review and teamwork.",
     },
     p3: {
-      uz: "Ish tashqarisida 10 ta to'liq stack loyiha jonli — tibbiyot, e-commerce, ta'lim, jonli dars, freelance marketplace, sayohat, jamoa boshqaruvi va kutubxona sohalarida. Har biri multi-tenant DB, RBAC, JWT, real-time va to'lov oqimlarini o'z ichiga oladi; barchasi VPS serverda Docker, Nginx va PostgreSQL bilan, HTTPS orqali joylashtirilgan. Ustoz — to'lovchi mijozi bor mahsulot.",
-      en: "Ten full-stack projects live outside work — healthcare, e-commerce, education, live teaching, freelance marketplaces, travel, team collaboration and library management. Each covers multi-tenant DB schemas, RBAC, JWT, real-time features and payment flows; all self-hosted on a VPS with Docker, Nginx and PostgreSQL over HTTPS. Ustoz is a product with a paying client.",
+      uz: "Ish tashqarisida 14 ta to'liq stack loyiha jonli — sun'iy intellekt (RAG), ma'lumot muhandisligi, tibbiyot, e-commerce, ta'lim, jonli dars, freelance marketplace, sayohat, jamoa boshqaruvi va kutubxona sohalarida. Har biri multi-tenant DB, RBAC, JWT, real-time va to'lov oqimlarini o'z ichiga oladi; barchasi VPS serverda Docker, Nginx va PostgreSQL bilan, HTTPS orqali joylashtirilgan. Ustoz — to'lovchi mijozi bor mahsulot.",
+      en: "Fourteen full-stack projects live outside work — AI (RAG), data engineering, healthcare, e-commerce, education, live teaching, freelance marketplaces, travel, team collaboration and library management. Each covers multi-tenant DB schemas, RBAC, JWT, real-time features and payment flows; all self-hosted on a VPS with Docker, Nginx and PostgreSQL over HTTPS. Ustoz is a product with a paying client.",
     },
     facts: {
       uz: [
         { k: "Joylashuv", v: "Toshkent, O'zbekiston" },
         { k: "Hozirgi ish", v: "Frontend Dev · ManaJoy" },
-        { k: "Loyihalar", v: "10 jonli · 8 self-hosted" },
+        { k: "Loyihalar", v: "14 jonli · self-hosted" },
         { k: "Deploy", v: "Docker · Nginx · VPS" },
         { k: "Ta'lim", v: "TDIU + Najot Ta'lim" },
         { k: "Mavjudligi", v: "Yangi imkoniyatlarga ochiq" },
@@ -960,7 +960,7 @@ export const t = {
       en: [
         { k: "Location", v: "Tashkent, Uzbekistan" },
         { k: "Current role", v: "Frontend Dev · ManaJoy" },
-        { k: "Projects", v: "10 live · 8 self-hosted" },
+        { k: "Projects", v: "14 live · self-hosted" },
         { k: "Deployment", v: "Docker · Nginx · VPS" },
         { k: "Education", v: "TSUE + Najot Ta'lim" },
         { k: "Availability", v: "Open to opportunities" },
